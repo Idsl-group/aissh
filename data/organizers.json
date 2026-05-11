@@ -2,7 +2,7 @@
   "contacts": [
     {
       "name": "Apurva Narayan",
-      "role": "Organizer & Conference Chair",
+      "role": "Co-Organizer & Conference Chair",
       "email": "apurva.narayan@uwo.ca",
       "photo": "assets/images/organizers/apurva-narayan.jpg",
       "institution": "University of Western Ontario",
@@ -11,7 +11,7 @@
     },
     {
       "name": "Umair Rehman",
-      "role": "Conference Chair",
+      "role": "Co-Organizer & Conference Chair",
       "email": "urehman6@uwo.ca",
       "photo": "assets/images/organizers/umair-rehman.jpeg",
       "institution": "University of Western Ontario",
@@ -20,7 +20,7 @@
     },
     {
       "name": "Atrisha Sarkar",
-      "role": "Conference Chair",
+      "role": "Co-Organizer & Conference Chair",
       "email": "asarka27@uwo.ca",
       "photo": "assets/images/organizers/atrisha-sarkar.png",
       "institution": "University of Western Ontario",
