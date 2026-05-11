@@ -40,7 +40,7 @@
       "time": "11:00",
       "type": "keynote",
       "title": "Keynote Speaker III",
-      "speaker": "Kerstin Dautenhahn",
+      "speaker": "Prof. Kerstin Dautenhahn",
       "affiliation": "",
       "status": "confirmed",
       "details": "Talk title to be announced"
@@ -73,7 +73,7 @@
       "time": "14:00",
       "type": "session",
       "title": "Selected Short Talks",
-      "details": "15 minutes each — speakers announced after acceptance decisions"
+      "details": "15 minutes each - speakers announced after acceptance decisions"
     },
     {
       "time": "15:00",
