@@ -1,0 +1,373 @@
+/* ============================================================
+   FORM.CSS — Abstract Submission Form
+   ============================================================ */
+
+/* ——— Page layout ——— */
+.cfp-layout {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+@media (max-width: 900px) {
+  .cfp-layout {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}
+
+/* ——— Info sidebar ——— */
+.cfp-info__section {
+  margin-bottom: 2rem;
+}
+
+.cfp-info__section-title {
+  font-family: var(--font-heading);
+  font-size: var(--text-small);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-slate);
+  margin-bottom: 0.75rem;
+}
+
+.cfp-area-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.cfp-area-item {
+  padding: 0.65rem 0.85rem;
+  border-left: 3px solid var(--color-forest);
+  background-color: var(--color-forest-10);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+}
+
+.cfp-area-item__label {
+  font-family: var(--font-heading);
+  font-size: var(--text-small);
+  font-weight: 500;
+  color: var(--color-forest);
+  display: block;
+  margin-bottom: 0.15rem;
+}
+
+.cfp-area-item__desc {
+  font-family: var(--font-body);
+  font-size: var(--text-caption);
+  color: var(--color-slate);
+  line-height: 1.4;
+}
+
+.cfp-guideline-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.cfp-guideline-item {
+  display: flex;
+  gap: 0.6rem;
+  font-family: var(--font-body);
+  font-size: var(--text-small);
+  color: var(--color-slate);
+  line-height: 1.5;
+}
+
+.cfp-guideline-item::before {
+  content: '→';
+  color: var(--color-forest);
+  flex-shrink: 0;
+  font-family: var(--font-heading);
+}
+
+/* ——— Form container ——— */
+.submission-form-wrap {
+  background-color: var(--color-white);
+  border-radius: var(--radius-xl);
+  padding: 2.5rem;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--color-deep-08);
+}
+
+@media (max-width: 560px) {
+  .submission-form-wrap {
+    padding: 1.5rem;
+    border-radius: var(--radius-lg);
+  }
+}
+
+/* ——— Form group header ——— */
+.form-group-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--color-deep-08);
+}
+
+.form-group-header + .form-group-header {
+  margin-top: 2rem;
+}
+
+.form-group-number {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: var(--color-forest);
+  color: var(--color-white);
+  font-family: var(--font-heading);
+  font-size: var(--text-caption);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.form-group-title {
+  font-family: var(--font-heading);
+  font-size: var(--text-small);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-slate);
+}
+
+/* ——— Form fieldsets ——— */
+.form-fieldset {
+  border: none;
+  padding: 0;
+  margin: 0 0 1.5rem;
+}
+
+/* ——— Field ——— */
+.form-field {
+  margin-bottom: 1.25rem;
+}
+
+.form-field:last-child {
+  margin-bottom: 0;
+}
+
+.form-label {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: var(--text-small);
+  font-weight: 500;
+  color: var(--color-deep);
+  margin-bottom: 0.4rem;
+}
+
+.form-label .required {
+  color: var(--color-amber);
+  margin-left: 0.2rem;
+}
+
+.form-hint {
+  display: block;
+  font-family: var(--font-body);
+  font-size: var(--text-caption);
+  color: var(--color-slate);
+  opacity: 0.7;
+  margin-bottom: 0.4rem;
+}
+
+/* ——— Input / Select / Textarea ——— */
+.form-input,
+.form-select,
+.form-textarea {
+  width: 100%;
+  padding: 0.7rem 1rem;
+  border: 1.5px solid rgba(74, 85, 104, 0.3);
+  border-radius: var(--radius-md);
+  background-color: var(--color-white);
+  color: var(--color-deep);
+  font-family: var(--font-body);
+  font-size: var(--text-body);
+  line-height: 1.5;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+  outline: none;
+  border-color: var(--color-forest);
+  box-shadow: 0 0 0 3px var(--color-forest-15);
+}
+
+.form-input.error,
+.form-select.error,
+.form-textarea.error {
+  border-color: var(--color-amber);
+  box-shadow: 0 0 0 3px var(--color-amber-10);
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 140px;
+}
+
+/* Select arrow */
+.form-select-wrap {
+  position: relative;
+}
+
+.form-select-wrap::after {
+  content: '';
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid var(--color-slate);
+  pointer-events: none;
+}
+
+/* ——— Char counter ——— */
+.form-char-counter {
+  display: flex;
+  justify-content: flex-end;
+  font-family: var(--font-mono);
+  font-size: var(--text-caption);
+  color: var(--color-slate);
+  opacity: 0.5;
+  margin-top: 0.35rem;
+}
+
+/* ——— Radio group ——— */
+.form-radio-group {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.form-radio-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.form-radio-item input[type="radio"] {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--color-forest);
+  cursor: pointer;
+}
+
+.form-radio-item label {
+  font-family: var(--font-heading);
+  font-size: var(--text-small);
+  color: var(--color-deep);
+  cursor: pointer;
+}
+
+/* ——— Checkbox ——— */
+.form-checkbox-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 1rem;
+  background-color: var(--color-deep-05);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-deep-08);
+}
+
+.form-checkbox-item input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+  accent-color: var(--color-forest);
+  cursor: pointer;
+}
+
+.form-checkbox-item label {
+  font-family: var(--font-body);
+  font-size: var(--text-small);
+  color: var(--color-slate);
+  line-height: 1.5;
+  cursor: pointer;
+}
+
+/* ——— Field error message ——— */
+.form-error-msg {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: var(--text-caption);
+  color: var(--color-amber);
+  margin-top: 0.3rem;
+}
+
+/* ——— Submit button ——— */
+.form-submit-wrap {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.form-submit-btn {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  font-size: 1rem;
+  justify-content: center;
+  min-height: 52px;
+}
+
+.form-submit-btn .spinner {
+  width: 18px;
+  height: 18px;
+  border: 2px solid rgba(255,255,255,0.4);
+  border-top-color: white;
+  border-radius: 50%;
+  animation: spinnerRotate 0.7s linear infinite;
+}
+
+/* ——— Success & error banners ——— */
+.form-success-banner,
+.form-error-banner {
+  display: none;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.25rem 1.5rem;
+  border-radius: var(--radius-md);
+  font-family: var(--font-body);
+  font-size: var(--text-small);
+  line-height: 1.6;
+}
+
+.form-success-banner.is-visible,
+.form-error-banner.is-visible {
+  display: flex;
+}
+
+.form-success-banner {
+  background-color: var(--color-forest-10);
+  border: 1px solid rgba(45, 106, 79, 0.25);
+  color: var(--color-forest);
+}
+
+.form-error-banner {
+  background-color: var(--color-amber-10);
+  border: 1px solid rgba(224, 123, 57, 0.3);
+  color: #a0531e;
+}
+
+/* ——— Two-column fields on wider screens ——— */
+@media (min-width: 560px) {
+  .form-field-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+}

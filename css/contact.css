@@ -1,0 +1,142 @@
+/* ============================================================
+   CONTACT.CSS — Contact Page Styles
+   ============================================================ */
+
+/* ——— Contact grid ——— */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+@media (max-width: 700px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ——— Contact card ——— */
+.contact-card {
+  background-color: var(--color-white);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--color-deep-08);
+  transition: box-shadow var(--transition-base), transform var(--transition-base);
+}
+
+.contact-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.contact-card__tag {
+  font-family: var(--font-mono);
+  font-size: var(--text-caption);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-forest);
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.contact-card__name {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--color-deep);
+  margin-bottom: 0.25rem;
+}
+
+.contact-card__role {
+  font-family: var(--font-body);
+  font-size: var(--text-small);
+  color: var(--color-slate);
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
+.contact-card__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-heading);
+  font-size: var(--text-small);
+  color: var(--color-forest);
+  text-decoration: none;
+  padding: 0.5rem 0.9rem;
+  border: 1.5px solid var(--color-forest-15);
+  border-radius: var(--radius-full);
+  transition: background-color var(--transition-fast),
+              border-color var(--transition-fast);
+}
+
+.contact-card__link:hover {
+  background-color: var(--color-forest-10);
+  border-color: var(--color-forest);
+  color: var(--color-forest);
+}
+
+/* ——— Venue section ——— */
+.venue-box {
+  background-color: var(--color-sand);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+}
+
+.venue-box__icon {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md);
+  background-color: var(--color-deep-08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-slate);
+  flex-shrink: 0;
+}
+
+.venue-box__label {
+  font-family: var(--font-mono);
+  font-size: var(--text-caption);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-slate);
+  display: block;
+  margin-bottom: 0.35rem;
+}
+
+.venue-box__value {
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: var(--color-deep);
+}
+
+.venue-box__note {
+  font-family: var(--font-body);
+  font-size: var(--text-small);
+  color: var(--color-slate);
+  margin-top: 0.35rem;
+  font-style: italic;
+}
+
+/* ——— Contact intro text ——— */
+.contact-intro {
+  font-size: 1.05rem;
+  color: var(--color-slate);
+  max-width: 56ch;
+  margin-bottom: 2.5rem;
+  line-height: var(--lh-body);
+}
+
+@media (max-width: 560px) {
+  .venue-box {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}

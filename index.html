@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Aligning AI for Safety, Sustainability, and Humanity — a joint workshop by the University of Western Ontario and University of Waterloo.">
+  <title>AISSH 2026 — Aligning AI for Safety, Sustainability, and Humanity</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=JetBrains+Mono:wght@400&display=swap"
+    rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/hero.css">
+  <link rel="stylesheet" href="css/home.css">
+</head>
+
+<body class="page-home">
+
+  <!-- ══ HEADER ══════════════════════════════════════════════ -->
+  <header class="site-header" role="banner">
+    <div class="site-header__inner">
+      <a href="index.html" class="site-header__logos" aria-label="AISSH 2026 — Home">
+        <img src="assets/logos/uwo-logo-rev.png" alt="University of Western Ontario" class="site-header__logo-img">
+        <span class="site-header__logo-sep" aria-hidden="true">×</span>
+        <img src="assets/logos/waterloo-logo-rev.png" alt="University of Waterloo" class="site-header__logo-img">
+      </a>
+
+      <span class="site-header__wordmark" aria-hidden="true">AISSH 2026</span>
+
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="index.html" class="site-nav__link" data-nav-link>Home</a>
+        <a href="speakers.html" class="site-nav__link" data-nav-link>Speakers</a>
+        <a href="schedule.html" class="site-nav__link" data-nav-link>Schedule</a>
+        <a href="organizers.html" class="site-nav__link" data-nav-link>Organizers</a>
+        <a href="contact.html" class="site-nav__link" data-nav-link>Contact</a>
+        <a href="call-for-abstracts.html" class="site-nav__link site-nav__cta" data-nav-link>Call for Abstracts</a>
+      </nav>
+
+      <button class="site-header__hamburger" aria-label="Open navigation menu" aria-expanded="false"
+        aria-controls="mobile-nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ══ MOBILE NAV ══════════════════════════════════════════ -->
+  <nav id="mobile-nav" class="site-nav__mobile" aria-label="Mobile navigation">
+    <a href="index.html" class="site-nav__mobile-link" data-nav-link>Home</a>
+    <a href="speakers.html" class="site-nav__mobile-link" data-nav-link>Speakers</a>
+    <a href="schedule.html" class="site-nav__mobile-link" data-nav-link>Schedule</a>
+    <a href="organizers.html" class="site-nav__mobile-link" data-nav-link>Organizers</a>
+    <a href="contact.html" class="site-nav__mobile-link" data-nav-link>Contact</a>
+    <a href="call-for-abstracts.html" class="site-nav__mobile-cta">Call for Abstracts</a>
+  </nav>
+
+  <main id="main-content">
+
+    <!-- ══ § HERO ══════════════════════════════════════════ -->
+    <section class="hero" aria-label="Conference hero">
+
+      <!-- Neural-tree canvas (right half, decorative) -->
+      <canvas id="tree-canvas" class="hero__canvas" aria-hidden="true"></canvas>
+
+      <div class="hero__content">
+        <span class="hero__eyebrow anim-fade-up">UWO × University of Waterloo</span>
+        <span class="hero__accent anim-fade-up anim-delay-1" aria-hidden="true"></span>
+
+        <h1 class="hero__headline anim-fade-up anim-delay-2">
+          Aligning AI for Safety, Sustainability, and Humanity
+        </h1>
+
+        <p class="hero__subline anim-fade-up anim-delay-3" id="hero-date">
+          Date &amp; Venue to be announced
+        </p>
+
+        <div class="hero__ctas anim-fade-up anim-delay-4">
+          <a href="schedule.html" class="btn btn-outline" id="hero-cta-schedule">View Programme</a>
+          <a href="call-for-abstracts.html" class="btn btn-primary" id="hero-cta-submit">Call for Abstracts</a>
+        </div>
+      </div>
+
+      <a href="#hosted-by" class="hero__scroll" aria-label="Scroll down">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <polyline points="6 9 12 15 18 9" />
+        </svg>
+      </a>
+    </section>
+
+    <!-- ══ § HOSTED BY ══════════════════════════════════════════ -->
+    <section class="hosted-by" id="hosted-by" aria-label="Hosted by">
+      <div class="container">
+        <div class="hosted-by__inner">
+          <span class="hosted-by__label">A joint workshop organized by</span>
+          <div class="hosted-by__logos">
+            <img src="assets/logos/uwo-logo.png" alt="University of Western Ontario" class="hosted-by__logo">
+            <span class="hosted-by__sep" aria-hidden="true">×</span>
+            <img src="assets/logos/waterloo-logo.png" alt="University of Waterloo" class="hosted-by__logo">
+          </div>
+          <p class="hosted-by__description">
+            A collaborative initiative between the University of Western Ontario and the University of Waterloo,
+            bringing together researchers, students, and practitioners to advance responsible AI.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <hr class="split-rule section-divider" aria-hidden="true">
+
+    <!-- ══ § ABOUT ═══════════════════════════════════════════════ -->
+    <section class="section" id="about" aria-labelledby="about-title">
+      <div class="container">
+        <div class="two-col">
+          <!-- Left: description -->
+          <div>
+            <div class="section-header reveal">
+              <span class="section-label">About the Conference</span>
+              <h2 class="section-title" id="about-title">Where AI meets its deepest responsibilities</h2>
+            </div>
+            <p class="about__description reveal anim-delay-1">
+              This workshop brings together interdisciplinary voices to examine the most urgent question
+              in artificial intelligence today: how do we ensure that increasingly powerful AI systems
+              are safe, ecologically responsible, and fundamentally aligned with human values?
+            </p>
+            <p class="about__description reveal anim-delay-2" style="margin-top:1rem;">
+              Through keynote lectures, short talks, and poster sessions, participants will engage
+              with cutting-edge research spanning technical AI safety, sustainable computing,
+              human-centred design, ethics, governance, and beyond.
+            </p>
+          </div>
+
+          <!-- Right: pillar cards -->
+          <div class="about__pillars">
+            <article class="pillar-card pillar-card--safety reveal">
+              <svg class="pillar-card__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                aria-hidden="true">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+              </svg>
+              <h3 class="pillar-card__title">Safety</h3>
+              <p class="pillar-card__desc">Robustness, interpretability, value alignment, and safe deployment of AI
+                systems.</p>
+            </article>
+            <article class="pillar-card pillar-card--sustain reveal anim-delay-1">
+              <svg class="pillar-card__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                aria-hidden="true">
+                <path d="M2 22 C2 22 7 17 12 12 C17 7 22 2 22 2" />
+                <path d="M6 2 C6 2 10 8 12 12 C14 16 18 22 18 22" />
+              </svg>
+              <h3 class="pillar-card__title">Sustainability</h3>
+              <p class="pillar-card__desc">Energy-efficient AI, climate applications, sustainable computing, and green
+                AI practices.</p>
+            </article>
+            <article class="pillar-card pillar-card--humanity reveal anim-delay-2">
+              <svg class="pillar-card__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                aria-hidden="true">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                <circle cx="9" cy="7" r="4" />
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+              </svg>
+              <h3 class="pillar-card__title">Humanity</h3>
+              <p class="pillar-card__desc">Explainability, trust, fairness, governance, and centering human values in AI
+                design.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="split-rule section-divider" aria-hidden="true">
+
+    <!-- ══ § KEY DATES ═══════════════════════════════════════════ -->
+    <section class="section section--sand" id="key-dates" aria-labelledby="dates-title">
+      <div class="container">
+        <div class="section-header section-header--center reveal">
+          <span class="section-label">Important Dates</span>
+          <h2 class="section-title" id="dates-title">Mark Your Calendar</h2>
+        </div>
+        <div class="key-dates__timeline" id="key-dates-list" aria-label="Key dates timeline">
+          <!-- Injected by home.js -->
+          <p class="text-center" style="color:var(--color-slate); padding:2rem 0;">Loading dates…</p>
+        </div>
+      </div>
+    </section>
+
+    <hr class="split-rule section-divider" aria-hidden="true">
+
+    <!-- ══ § KEYNOTE SPEAKERS PREVIEW ══════════════════════════ -->
+    <section class="section" id="speakers" aria-labelledby="speakers-preview-title">
+      <div class="container">
+        <div class="section-header section-header--center reveal">
+          <span class="section-label">Keynote Speakers</span>
+          <h2 class="section-title" id="speakers-preview-title">Confirmed Speakers</h2>
+          <p class="section-subtitle">Leading researchers and practitioners shaping the future of responsible AI.</p>
+        </div>
+        <div class="card-grid card-grid--4" id="speakers-preview-grid" aria-label="Speaker preview cards">
+          <!-- Injected by home.js -->
+        </div>
+        <div class="speaker-preview__see-all reveal">
+          <a href="speakers.html" class="btn btn-outline-dark" id="see-all-speakers-link">
+            See All Speakers
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="5" y1="12" x2="19" y2="12" />
+              <polyline points="12 5 19 12 12 19" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <hr class="split-rule section-divider" aria-hidden="true">
+
+    <!-- ══ § QUICK SCHEDULE ════════════════════════════════════ -->
+    <section class="section section--sand" id="quick-schedule" aria-labelledby="schedule-preview-title">
+      <div class="container">
+        <div class="two-col">
+          <div>
+            <div class="section-header reveal">
+              <span class="section-label">Programme at a Glance</span>
+              <h2 class="section-title" id="schedule-preview-title">One Day of Ideas</h2>
+              <p class="section-subtitle">A full day of keynotes, short talks, poster sessions, and networking.</p>
+            </div>
+            <div class="quick-schedule__link reveal">
+              <a href="schedule.html" class="btn btn-primary" id="full-schedule-link">
+                View Full Schedule
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  aria-hidden="true">
+                  <line x1="5" y1="12" x2="19" y2="12" />
+                  <polyline points="12 5 19 12 12 19" />
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div id="quick-schedule-list" class="quick-schedule__list reveal anim-delay-1"
+            aria-label="Quick schedule overview">
+            <!-- Injected by home.js -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ § CFP BANNER ════════════════════════════════════════ -->
+    <section class="cfp-banner" id="cfp" aria-labelledby="cfp-title">
+      <div class="container">
+        <div class="cfp-banner__inner">
+          <div class="cfp-banner__rings" aria-hidden="true">
+            <div class="cfp-banner__rings-inner">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                <polyline points="14 2 14 8 20 8" />
+                <line x1="16" y1="13" x2="8" y2="13" />
+                <line x1="16" y1="17" x2="8" y2="17" />
+                <polyline points="10 9 9 9 8 9" />
+              </svg>
+            </div>
+          </div>
+          <div>
+            <span class="cfp-banner__deadline-label">Abstract Submission Deadline</span>
+            <span class="cfp-banner__deadline-date" id="cfp-deadline-display">To be announced</span>
+          </div>
+          <h2 class="cfp-banner__title" id="cfp-title">Call for Abstracts</h2>
+          <p class="cfp-banner__subtitle">
+            We welcome extended abstracts (1 page max) from students across disciplines.
+            Selected authors may be invited to contribute to a book chapter.
+          </p>
+          <a href="call-for-abstracts.html" class="btn cfp-banner__cta" id="cfp-banner-submit-btn">
+            Submit Your Abstract
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="5" y1="12" x2="19" y2="12" />
+              <polyline points="12 5 19 12 12 19" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ══ FOOTER ═══════════════════════════════════════════════ -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="site-footer__body">
+        <div class="site-footer__identity">
+          <p class="site-footer__conf-name">AISSH 2026</p>
+          <p class="site-footer__tagline">Aligning AI for Safety, Sustainability, and Humanity</p>
+          <ul class="site-footer__contact-list">
+            <li class="site-footer__contact-item">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                aria-hidden="true">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                <polyline points="22,6 12,13 2,6" />
+              </svg>
+              <a href="contact.html">General Enquiries</a>
+            </li>
+          </ul>
+        </div>
+
+        <nav class="site-footer__nav" aria-label="Footer navigation">
+          <p class="site-footer__nav-heading">Quick Links</p>
+          <ul class="site-footer__nav-list">
+            <li><a href="index.html" class="site-footer__nav-link">Home</a></li>
+            <li><a href="speakers.html" class="site-footer__nav-link">Speakers</a></li>
+            <li><a href="schedule.html" class="site-footer__nav-link">Schedule</a></li>
+            <li><a href="call-for-abstracts.html" class="site-footer__nav-link">Call for Abstracts</a></li>
+            <li><a href="organizers.html" class="site-footer__nav-link">Organizers</a></li>
+            <li><a href="contact.html" class="site-footer__nav-link">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="site-footer__universities">
+          <div class="site-footer__uni-strip">
+            <img src="assets/logos/uwo-logo-rev.png" alt="University of Western Ontario" class="site-footer__uni-logo">
+            <span class="site-footer__uni-sep" aria-hidden="true">×</span>
+            <img src="assets/logos/waterloo-logo-rev.png" alt="University of Waterloo" class="site-footer__uni-logo">
+          </div>
+          <p class="site-footer__uni-label">A joint workshop by UWO &amp; Waterloo</p>
+        </div>
+      </div>
+
+      <div class="site-footer__bottom">
+        <p class="site-footer__copyright">© <span class="footer-year">2026</span> AISSH. All rights reserved.</p>
+        <p class="site-footer__credit">IT Chair: Aarat Satsangi</p>
+      </div>
+    </div>
+    <div class="site-footer__uni-bar" aria-hidden="true"></div>
+  </footer>
+
+  <!-- ══ SCRIPTS ══════════════════════════════════════════════ -->
+  <script src="js/main.js"></script>
+  <script src="js/home.js"></script>
+  <script src="js/tree.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,162 @@
+/* ============================================================
+   HERO.CSS — Homepage Hero Section
+   ============================================================ */
+
+.hero {
+  position: relative;
+  min-height: 100svh;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--color-deep);
+  background-image:
+    radial-gradient(ellipse 80% 60% at 20% 40%, rgba(45, 106, 79, 0.12) 0%, transparent 70%);
+  overflow: hidden;
+  color: var(--color-white);
+}
+
+/* ——— Neural-tree canvas ——— */
+.hero__canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.8; /* matches ctrl-trees default value */
+  transition: opacity 0.1s;
+}
+
+
+/* ——— Background texture (disabled) ——— */
+.hero__texture {
+  display: none;
+}
+
+/* Bottom gradient overlay removed */
+
+/* ——— Content — centered above the tree ——— */
+.hero__content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: var(--container-px);
+  padding-top: calc(var(--header-height) + 2rem);
+  padding-bottom: 6rem;
+  text-align: center;
+}
+
+/* ——— Pre-headline tag ——— */
+.hero__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: var(--text-caption);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-sage);
+  margin-bottom: 1.5rem;
+}
+
+.hero__eyebrow::before {
+  content: '';
+  display: block;
+  width: 24px;
+  height: 1px;
+  background-color: var(--color-sage);
+}
+
+/* ——— Headline ——— */
+.hero__headline {
+  font-family: var(--font-display);
+  font-size: var(--text-hero);
+  font-weight: 700;
+  line-height: var(--lh-hero);
+  color: var(--color-white);
+  margin-bottom: 1.25rem;
+  max-width: 18ch;
+  margin-inline: auto; /* centre the constrained headline */
+}
+
+/* Stagger animation on words */
+.hero__headline .word {
+  display: inline-block;
+  animation: fadeInUp 0.7s ease both;
+}
+
+/* ——— Subline ——— */
+.hero__subline {
+  font-family: var(--font-heading);
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  color: rgba(253, 252, 248, 0.65);
+  margin-bottom: 2.5rem;
+  max-width: 48ch;
+  line-height: 1.6;
+  margin-inline: auto;
+}
+
+/* ——— CTA group ——— */
+.hero__ctas {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* ——— Scroll chevron ——— */
+.hero__scroll {
+  position: absolute;
+  bottom: 2.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.35rem;
+  color: rgba(253, 252, 248, 0.35);
+  font-family: var(--font-mono);
+  font-size: var(--text-caption);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.hero__scroll svg {
+  animation: chevronBounce 1.8s ease-in-out infinite;
+}
+
+
+/* ——— Decorative accent line ——— */
+.hero__accent {
+  display: block;
+  width: 64px;
+  height: 3px;
+  background: linear-gradient(to right, var(--color-forest), var(--color-amber));
+  border-radius: var(--radius-full);
+  margin-bottom: 2rem;
+  margin-inline: auto;
+}
+
+/* ——— Responsive ——— */
+@media (max-width: 768px) {
+  .hero__content {
+    max-width: 100%;
+    padding-bottom: 5rem;
+  }
+
+  .hero__ctas {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero__scroll {
+    bottom: 1.5rem;
+  }
+}

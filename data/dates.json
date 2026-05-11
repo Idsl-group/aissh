@@ -1,0 +1,22 @@
+{
+  "dates": [
+    {
+      "label": "Abstract Submission Deadline",
+      "date": "2026-05-20",
+      "category": "submission",
+      "highlight": true
+    },
+    {
+      "label": "Notification of Acceptance",
+      "date": "2026-05-25",
+      "category": "submission",
+      "highlight": false
+    },
+    {
+      "label": "Conference Day",
+      "date": "2026-06-02",
+      "category": "conference",
+      "highlight": false
+    }
+  ]
+}

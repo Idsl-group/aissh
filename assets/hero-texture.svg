@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="480" viewBox="0 0 480 480">
+  <defs>
+    <pattern id="leaf-circuit" x="0" y="0" width="120" height="120" patternUnits="userSpaceOnUse">
+      <!-- ─── Leaf: central rib ─── -->
+      <path d="M60 4 C63 28 65 55 60 116" stroke="#FDFCF8" stroke-width="0.7" fill="none" stroke-linecap="round"/>
+      <!-- Secondary veins (left) -->
+      <path d="M60 25 C50 23 38 19 10 16" stroke="#FDFCF8" stroke-width="0.35" fill="none" stroke-linecap="round" opacity="0.8"/>
+      <path d="M60 42 C51 40 43 37 22 33" stroke="#FDFCF8" stroke-width="0.3"  fill="none" stroke-linecap="round" opacity="0.7"/>
+      <path d="M60 58 C52 56 44 52 28 48" stroke="#FDFCF8" stroke-width="0.3"  fill="none" stroke-linecap="round" opacity="0.65"/>
+      <path d="M60 74 C53 72 47 70 35 67" stroke="#FDFCF8" stroke-width="0.25" fill="none" stroke-linecap="round" opacity="0.55"/>
+      <!-- Secondary veins (right) -->
+      <path d="M60 30 C68 28 78 24 102 20" stroke="#FDFCF8" stroke-width="0.35" fill="none" stroke-linecap="round" opacity="0.8"/>
+      <path d="M60 48 C67 46 75 44 96 41" stroke="#FDFCF8" stroke-width="0.3"  fill="none" stroke-linecap="round" opacity="0.7"/>
+      <path d="M60 64 C66 62 72 61 90 58" stroke="#FDFCF8" stroke-width="0.3"  fill="none" stroke-linecap="round" opacity="0.65"/>
+      <path d="M60 80 C65 79 70 78 84 76" stroke="#FDFCF8" stroke-width="0.25" fill="none" stroke-linecap="round" opacity="0.55"/>
+
+      <!-- ─── PCB traces ─── -->
+      <!-- Bottom-left L-trace -->
+      <path d="M0 100 L18 100 L18 82" stroke="#74C69D" stroke-width="0.55" fill="none" stroke-linecap="square"/>
+      <!-- Top-right L-trace -->
+      <path d="M102 0 L102 18 L120 18" stroke="#74C69D" stroke-width="0.55" fill="none" stroke-linecap="square"/>
+      <!-- Top-left small trace -->
+      <path d="M0 18 L14 18 L14 0"   stroke="#74C69D" stroke-width="0.45" fill="none" stroke-linecap="square" opacity="0.7"/>
+      <!-- Bottom-right small trace -->
+      <path d="M120 102 L106 102 L106 120" stroke="#74C69D" stroke-width="0.45" fill="none" stroke-linecap="square" opacity="0.7"/>
+
+      <!-- Via dots at trace corners -->
+      <circle cx="18"  cy="82"  r="2"   fill="#74C69D" opacity="0.6"/>
+      <circle cx="102" cy="18"  r="2"   fill="#74C69D" opacity="0.6"/>
+      <circle cx="14"  cy="18"  r="1.5" fill="#74C69D" opacity="0.5"/>
+      <circle cx="106" cy="102" r="1.5" fill="#74C69D" opacity="0.5"/>
+    </pattern>
+  </defs>
+  <rect width="480" height="480" fill="url(#leaf-circuit)"/>
+</svg>

@@ -1,0 +1,97 @@
+{
+  "sessions": [
+    {
+      "time": "08:30",
+      "type": "registration",
+      "title": "Registration",
+      "details": "Check-in and Morning Refreshments"
+    },
+    {
+      "time": "09:00",
+      "type": "session",
+      "title": "Opening Remarks",
+      "details": "Welcome and Workshop Objectives"
+    },
+    {
+      "time": "09:15",
+      "type": "keynote",
+      "title": "Keynote Speaker I",
+      "speaker": "Prof. Catherine Burns",
+      "affiliation": "",
+      "status": "confirmed",
+      "details": "Talk title to be announced"
+    },
+    {
+      "time": "09:45",
+      "type": "keynote",
+      "title": "Keynote Speaker II",
+      "speaker": "Prof. Joshua Pearce",
+      "affiliation": "",
+      "status": "confirmed",
+      "details": "Talk title to be announced"
+    },
+    {
+      "time": "10:30",
+      "type": "break",
+      "title": "Networking Break",
+      "details": "Coffee and Interdisciplinary Networking"
+    },
+    {
+      "time": "11:00",
+      "type": "keynote",
+      "title": "Keynote Speaker III",
+      "speaker": "Kerstin Dautenhahn",
+      "affiliation": "",
+      "status": "confirmed",
+      "details": "Talk title to be announced"
+    },
+    {
+      "time": "11:30",
+      "type": "keynote",
+      "title": "Keynote Speaker IV",
+      "speaker": "Marscha Chechik",
+      "affiliation": "",
+      "status": "confirmed",
+      "details": "Talk title to be announced"
+    },
+    {
+      "time": "12:00",
+      "type": "lunch",
+      "title": "Lunch",
+      "details": "Lunch break"
+    },
+    {
+      "time": "13:30",
+      "type": "keynote",
+      "title": "Keynote Speaker V",
+      "speaker": "Alice Huang",
+      "affiliation": "",
+      "status": "confirmed",
+      "details": "Talk title to be announced"
+    },
+    {
+      "time": "14:00",
+      "type": "session",
+      "title": "Selected Short Talks",
+      "details": "15 minutes each — speakers announced after acceptance decisions"
+    },
+    {
+      "time": "15:00",
+      "type": "break",
+      "title": "Poster Session + Coffee",
+      "details": "Interactive poster presentations and coffee"
+    },
+    {
+      "time": "16:00",
+      "type": "awards",
+      "title": "Awards & Closing Remarks",
+      "details": "Best Poster Award, Best Talk Award, Closing Remarks"
+    },
+    {
+      "time": "16:30",
+      "type": "networking",
+      "title": "Networking",
+      "details": "Open networking reception"
+    }
+  ]
+}

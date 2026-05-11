@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 48" role="img" aria-label="University of Western Ontario">
+  <!-- Shield base -->
+  <path d="M8 4 L8 30 Q8 42 20 46 L20 46 Q32 42 32 30 L32 4 Z" fill="#4F2683"/>
+  <!-- White 'W' on shield -->
+  <path d="M13 12 L16 28 L20 18 L24 28 L27 12" stroke="white" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Wordmark -->
+  <text x="38" y="19" font-family="Georgia, serif" font-size="11" font-weight="700" fill="#4F2683">Western</text>
+  <text x="38" y="33" font-family="Georgia, serif" font-size="8.5" fill="#4F2683" letter-spacing="0.3">UNIVERSITY</text>
+</svg>

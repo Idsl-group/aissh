@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 48" role="img" aria-label="University of Waterloo">
+  <!-- Bold UW monogram block -->
+  <rect x="2" y="6" width="36" height="36" rx="4" fill="#FFC72C"/>
+  <!-- Dark 'UW' on yellow block -->
+  <path d="M8 14 L8 28 Q8 35 14 35 Q20 35 20 28 L20 14" stroke="#1a1a1a" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+  <path d="M22 14 L25 30 L29 20 L33 30 L36 14" stroke="#1a1a1a" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Wordmark -->
+  <text x="46" y="20" font-family="Arial, sans-serif" font-size="11" font-weight="700" fill="#1a1a1a">Waterloo</text>
+  <text x="46" y="34" font-family="Arial, sans-serif" font-size="8.5" fill="#555" letter-spacing="0.3">UNIVERSITY</text>
+</svg>

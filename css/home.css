@@ -1,0 +1,528 @@
+/* ============================================================
+   HOME.CSS — Homepage Section Styles
+   (Hosted By, About, Key Dates, Speaker Preview,
+    Quick Schedule, CFP Banner)
+   ============================================================ */
+
+/* ——— § Hosted By ——— */
+.hosted-by {
+  padding-block: 3rem;
+  background-color: var(--color-white);
+  border-bottom: 1px solid var(--color-deep-08);
+}
+
+.hosted-by__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+  text-align: center;
+}
+
+.hosted-by__label {
+  font-family: var(--font-mono);
+  font-size: var(--text-caption);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-slate);
+}
+
+.hosted-by__logos {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.hosted-by__logo {
+  height: 44px;
+  width: auto;
+}
+
+
+.hosted-by__logo[src*="uwo"] {
+  height: 50px;
+  margin-right: 35px;
+  /* Western logo is wide/tall, visually shrink it slightly */
+}
+
+.hosted-by__logo[src*="waterloo"] {
+  height: 106px;
+  /* Waterloo logo is mostly padding/wide, visually scale it up */
+}
+
+.hosted-by__sep {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  color: var(--color-deep-20);
+  font-weight: 300;
+}
+
+.hosted-by__description {
+  font-family: var(--font-body);
+  font-size: var(--text-small);
+  color: var(--color-slate);
+  max-width: 52ch;
+  line-height: var(--lh-body);
+}
+
+/* ——— § About the Conference ——— */
+.about__description {
+  font-size: 1.05rem;
+  line-height: var(--lh-body);
+  color: var(--color-slate);
+  margin-bottom: 0;
+}
+
+/* Pillar Cards */
+.pillar-card {
+  background-color: var(--color-white);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  border-left: 4px solid transparent;
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow var(--transition-base), transform var(--transition-base);
+}
+
+.pillar-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-3px);
+}
+
+.pillar-card--safety {
+  border-left-color: var(--color-amber);
+}
+
+.pillar-card--sustain {
+  border-left-color: var(--color-forest);
+}
+
+.pillar-card--humanity {
+  border-left-color: var(--color-deep);
+}
+
+.pillar-card__icon {
+  width: 36px;
+  height: 36px;
+  margin-bottom: 0.75rem;
+  color: var(--color-forest);
+}
+
+.pillar-card--safety .pillar-card__icon {
+  color: var(--color-amber);
+}
+
+.pillar-card--humanity .pillar-card__icon {
+  color: var(--color-deep);
+}
+
+.pillar-card__title {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-deep);
+  margin-bottom: 0.4rem;
+}
+
+.pillar-card__desc {
+  font-family: var(--font-body);
+  font-size: var(--text-small);
+  color: var(--color-slate);
+  line-height: 1.6;
+}
+
+.about__pillars {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* ——— § Key Dates ——— */
+.key-dates__timeline {
+  display: flex;
+  gap: 0;
+  position: relative;
+}
+
+/* Horizontal desktop layout */
+.key-dates__timeline::before {
+  content: '';
+  position: absolute;
+  top: 28px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--color-deep-08);
+  z-index: 0;
+}
+
+.key-date-item {
+  flex: 1;
+  position: relative;
+  padding-top: 3.5rem;
+  padding-inline: 1rem;
+  text-align: center;
+  z-index: 1;
+}
+
+.key-date-item__dot {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: var(--color-slate);
+  border: 3px solid var(--color-white);
+  box-shadow: 0 0 0 2px var(--color-slate);
+  transition: background-color var(--transition-base);
+}
+
+.key-date-item--highlight .key-date-item__dot {
+  background-color: var(--color-amber);
+  box-shadow: 0 0 0 2px var(--color-amber);
+}
+
+.key-date-item--past .key-date-item__dot {
+  background-color: var(--color-deep-20);
+  box-shadow: 0 0 0 2px var(--color-deep-20);
+}
+
+.key-date-item__date {
+  font-family: var(--font-mono);
+  font-size: var(--text-caption);
+  color: var(--color-amber);
+  margin-bottom: 0.35rem;
+  display: block;
+}
+
+.key-date-item--past .key-date-item__date {
+  color: var(--color-slate);
+  opacity: 0.5;
+}
+
+.key-date-item__label {
+  font-family: var(--font-heading);
+  font-size: var(--text-small);
+  font-weight: 500;
+  color: var(--color-deep);
+  line-height: 1.3;
+}
+
+.key-date-item--past .key-date-item__label {
+  color: var(--color-slate);
+  opacity: 0.6;
+}
+
+/* TBD dates — not yet announced */
+.key-date-item--tbd .key-date-item__date {
+  color: var(--color-slate);
+  font-style: italic;
+  opacity: 0.6;
+}
+
+.key-date-item--tbd .key-date-item__label {
+  opacity: 0.7;
+}
+
+/* Mobile: vertical */
+@media (max-width: 700px) {
+  .key-dates__timeline {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .key-dates__timeline::before {
+    top: 0;
+    bottom: 0;
+    left: 22px;
+    right: auto;
+    width: 2px;
+    height: auto;
+  }
+
+  .key-date-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.25rem;
+    padding-top: 0;
+    padding-left: 56px;
+    padding-bottom: 1.75rem;
+    text-align: left;
+  }
+
+  .key-date-item__dot {
+    top: 4px;
+    left: 16px;
+    transform: none;
+  }
+
+  /* .key-date-item__text — no specific styles needed */
+}
+
+/* ——— § Speaker Preview ——— */
+.speaker-preview-card {
+  background-color: var(--color-white);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow var(--transition-base), transform var(--transition-base);
+  cursor: pointer;
+}
+
+.speaker-preview-card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-4px);
+}
+
+.speaker-preview-card__photo-wrap {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+}
+
+.speaker-preview-card__photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(20%) brightness(0.85);
+  transition: filter var(--transition-slow);
+}
+
+.speaker-preview-card:hover .speaker-preview-card__photo {
+  filter: none;
+}
+
+.speaker-preview-card__avatar {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-forest-15);
+  font-family: var(--font-display);
+  font-size: 3rem;
+  font-weight: 600;
+  color: var(--color-forest);
+}
+
+.speaker-preview-card__body {
+  padding: 1.25rem;
+}
+
+.speaker-preview-card__name {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-deep);
+  margin-bottom: 0.2rem;
+}
+
+.speaker-preview-card__affiliation {
+  font-family: var(--font-body);
+  font-size: var(--text-small);
+  color: var(--color-slate);
+  line-height: 1.4;
+}
+
+.speaker-preview-card__tag {
+  margin-top: 0.6rem;
+  font-family: var(--font-mono);
+  font-size: var(--text-caption);
+  color: var(--color-forest);
+  letter-spacing: 0.04em;
+}
+
+.speaker-preview__see-all {
+  text-align: center;
+  margin-top: 2.5rem;
+}
+
+/* ——— § Quick Schedule ——— */
+.quick-schedule__list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border: 1px solid var(--color-deep-08);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.quick-schedule-row {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  padding: 0.9rem 1.5rem;
+  border-bottom: 1px solid var(--color-deep-05);
+  transition: background-color var(--transition-fast);
+}
+
+.quick-schedule-row:last-child {
+  border-bottom: none;
+}
+
+.quick-schedule-row:nth-child(even) {
+  background-color: var(--color-deep-05);
+}
+
+.quick-schedule-row:hover {
+  background-color: var(--color-forest-10);
+}
+
+.quick-schedule-row__time {
+  font-family: var(--font-mono);
+  font-size: var(--text-caption);
+  color: var(--color-slate);
+  min-width: 42px;
+  flex-shrink: 0;
+}
+
+.quick-schedule-row__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.quick-schedule-row__title {
+  font-family: var(--font-heading);
+  font-size: var(--text-small);
+  font-weight: 500;
+  color: var(--color-deep);
+  flex: 1;
+}
+
+.quick-schedule-row__speaker {
+  font-family: var(--font-body);
+  font-size: var(--text-caption);
+  color: var(--color-slate);
+}
+
+.quick-schedule__link {
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+/* ——— § CFP Banner ——— */
+.cfp-banner {
+  background-color: var(--color-forest);
+  color: var(--color-white);
+  position: relative;
+  overflow: hidden;
+  padding-block: 5rem;
+}
+
+.cfp-banner::before {
+  display: none;
+}
+
+.cfp-banner__inner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1.5rem;
+}
+
+/* Concentric ring decoration */
+.cfp-banner__rings {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.cfp-banner__rings::before,
+.cfp-banner__rings::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid rgba(253, 252, 248, 0.2);
+}
+
+.cfp-banner__rings::before {
+  inset: 0;
+}
+
+.cfp-banner__rings::after {
+  inset: 16px;
+}
+
+.cfp-banner__rings-inner {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 1px solid rgba(253, 252, 248, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cfp-banner__deadline-label {
+  font-family: var(--font-mono);
+  font-size: var(--text-caption);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(253, 252, 248, 0.65);
+  display: block;
+  margin-bottom: 0.35rem;
+}
+
+.cfp-banner__deadline-date {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  color: var(--color-white);
+  display: block;
+  line-height: 1;
+}
+
+.cfp-banner__title {
+  font-family: var(--font-display);
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  font-weight: 700;
+  color: var(--color-white);
+  line-height: 1.15;
+}
+
+.cfp-banner__subtitle {
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  color: rgba(253, 252, 248, 0.75);
+  max-width: 48ch;
+  line-height: var(--lh-body);
+}
+
+.cfp-banner__cta {
+  background-color: var(--color-white) !important;
+  color: var(--color-forest) !important;
+}
+
+.cfp-banner__cta:hover {
+  background-color: var(--color-sand) !important;
+  color: var(--color-forest) !important;
+}
+
+@media (max-width: 640px) {
+  .cfp-banner {
+    padding-block: 4rem;
+  }
+
+  .hosted-by__logo[src*="uwo"] {
+    height: 32px;
+    margin-right: 15px;
+  }
+
+  .hosted-by__logo[src*="waterloo"] {
+    height: 64px;
+  }
+
+  .hosted-by__logos {
+    gap: 1rem;
+  }
+}

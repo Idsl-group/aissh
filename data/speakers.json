@@ -1,0 +1,34 @@
+{
+  "speakers": [
+    {
+      "id": "catherine-burns",
+      "name": "Prof. Catherine Burns",
+      "affiliation": "University of Waterloo",
+      "title": "Professor, Canada Research Chair in Human Factors in Healthcare Systems",
+      "bio": "Catherine M. Burns is Professor in Systems Design Engineering at the University of Waterloo, Canada and Associate Vice President, Health Initiatives at the Office of Research at the University of Waterloo. In her past administrative roles she has been engaged with institutional and tri agency funding programs, research partnerships, Waterloo’s equity in research action plan, and research computing. Catherine was the founder of the Centre for Bioengineering and Biotechnology at Waterloo and led the centre from a faculty to an institutional centre over 8 years. In 2020 she chaired Waterloo’s Health Initiatives Task force to develop a health strategy in response to Waterloo’s 2025 Strategic Plan. In her role as AVP, Health Initiatives she is responsible for advancing Waterloo research in health and health technology. Catherine holds a Tier 1 Canada Research Chair in Human Factors and Healthcare Systems, has contributed over 300 publications and is the co-author of seven books and the PI on an NSERC CREATE Training program in biomedical technology and entrepreneurship which has trained over 40 graduate students from various faculties across campus.",
+      "talk_title": "Talk title to be announced",
+      "photo": "assets/images/speakers/catherine-burns.png",
+      "status": "confirmed"
+    },
+    {
+      "id": "joshua-pearce",
+      "name": "Prof. Joshua Pearce",
+      "affiliation": "University of Western Ontario",
+      "title": "Professor, John M. Thompson Chair in Information Technology and Innovation at the Thompson Centre for Engineering Leadership & Innovation",
+      "bio": "Dr. Pearce is the John M. Thompson Chair in Information Technology and Innovation at the Thompson Centre for Engineering Leadership & Innovation. He holds appointments at Ivey Business School, the top ranked business school in Canada and the Department of Electrical & Computer Engineering at Western University in Canada, a top 1% global university. His research concentrates on the use of open source appropriate technology (OSAT) to find collaborative solutions to problems in sustainability and to reduce poverty. His research spans areas of engineering of solar photovoltaic technology, open hardware, and distributed recycling and additive manufacturing (DRAM) using RepRap 3-D printing, but also includes policy and economics. His research is regularly covered by the international and national press and it is continually ranked in the top 0.1% on Academia.edu. He is the editor-in-chief of HardwareX, the first journal dedicated to open source scientific hardware and the author of the Open-Source Lab:How to Build Your Own Hardware and Reduce Research Costs, Create, Share, and Save Money Using Open-Source Projects, and To Catch the Sun, an open source book of inspiring stories of communities coming together to harness their own solar energy, and how you can do it too!.",
+      "talk_title": "Talk title to be announced",
+      "photo": "assets/images/speakers/joshua-pearce.png",
+      "status": "confirmed"
+    },
+    {
+      "id": "kerstin-dautenhahn",
+      "name": "Prof. Kerstin Dautenhahn",
+      "affiliation": "University of Waterloo",
+      "title": "Professor, Canada Research Chair (Tier 1) in Socially Intelligent Robotics, Director of the Social and Intelligent Robotics Research Laboratory (SIRRL)",
+      "bio": "Kerstin Dautenhahn is a professor in the Department of Electrical and Computer Engineering at the University of Waterloo. She is Canada Research Chair (Tier 1) in Socially Intelligent Robotics. Previously she was Canada 150 Research Chair in Intelligent Robotics (2018-2025). She is cross-appointed to the David R. Cheriton School of Computer Science, the Department of Mechanical and Mechatronics Engineering, and the Department of Systems Design Engineering at University of Waterloo. She is Visiting Professor at the University of Hertfordshire, UK. At Waterloo she is the Director of the Social and Intelligent Robotics Research Laboratory (SIRRL)). The main areas of her research are Human-Robot Interaction, Social Robotics, Assistive Technology, Developmental Robotics and Health Technologies. She is Editor in Chief (jointly with Prof. Angelo Cangelosi - University of Manchester, UK) of the Journal Interaction Studies- Social Behaviour and Communication in Biological and Artificial Systems published by John Benjamins Publishing Company, Editorial Board Member of Adaptive Behavior, Sage Publications, and Associate Editor of the International Journal of Social Robotics, published by Springer. She is an Editor of the book series Advances in Interaction Studies, published by John Benjamins Publishing Company. She is a Fellow of the Royal Society of Canada (RSC), Fellow of the IEEE, member of ACM, and a Lifelong Fellow of AISB. Since 2006 she has been part of the Standing Steering Committee of the IEEE conference RO-MAN (Human and Robot Interactive Communication).",
+      "talk_title": "Talk title to be announced",
+      "photo": "assets/images/speakers/kerstin-dautenhahn.png",
+      "status": "confirmed"
+    }
+  ]
+}

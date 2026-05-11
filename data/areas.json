@@ -1,0 +1,34 @@
+{
+  "areas": [
+    {
+      "id": "safety",
+      "label": "AI Safety and Alignment",
+      "description": "Robustness, interpretability, value alignment, red-teaming, safe deployment"
+    },
+    {
+      "id": "sustainability",
+      "label": "AI for Sustainability",
+      "description": "Energy-efficient AI, climate applications, sustainable computing, green AI"
+    },
+    {
+      "id": "human-ai",
+      "label": "Human-AI Interaction",
+      "description": "Explainability, trust, participatory design, accessibility, HCI"
+    },
+    {
+      "id": "ethics-governance",
+      "label": "AI Ethics and Governance",
+      "description": "Fairness, accountability, policy, regulation, societal impact"
+    },
+    {
+      "id": "healthcare",
+      "label": "AI in Healthcare and Wellbeing",
+      "description": "Medical AI, mental health, assistive technology, patient safety"
+    },
+    {
+      "id": "education",
+      "label": "AI in Education",
+      "description": "Learning tools, equitable access, AI literacy, pedagogical AI"
+    }
+  ]
+}

@@ -1,0 +1,132 @@
+/* ============================================================
+   ORGANIZERS.CSS — Committee / Organizer Cards
+   ============================================================ */
+
+/* ——— Group label ——— */
+.organizer-group {
+  margin-bottom: 4rem;
+}
+
+.organizer-group__title {
+  font-family: var(--font-mono);
+  font-size: var(--text-caption);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-forest);
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--color-deep-08);
+  margin-bottom: 2rem;
+  display: block;
+}
+
+/* ——— Organizer card ——— */
+.organizer-card {
+  background-color: var(--color-white);
+  border-radius: var(--radius-lg);
+  padding: 2rem 1.5rem;
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--color-deep-08);
+  transition: box-shadow var(--transition-base), transform var(--transition-base);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.organizer-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-3px);
+}
+
+/* ——— Photo / Avatar ——— */
+.organizer-card__photo-wrap {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid var(--color-sand);
+  box-shadow: var(--shadow-sm);
+  flex-shrink: 0;
+}
+
+.organizer-card__photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.organizer-card__avatar {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, var(--color-forest-15), var(--color-deep-08));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--color-forest);
+}
+
+/* ——— Text ——— */
+.organizer-card__name {
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--color-deep);
+  line-height: 1.2;
+}
+
+.organizer-card__role {
+  font-family: var(--font-body);
+  font-size: var(--text-small);
+  color: var(--color-forest);
+  font-style: italic;
+}
+
+.organizer-card__institution {
+  font-family: var(--font-body);
+  font-size: var(--text-caption);
+  color: var(--color-slate);
+  opacity: 0.7;
+}
+
+/* ——— Email link ——— */
+.organizer-card__email {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-family: var(--font-heading);
+  font-size: var(--text-caption);
+  color: var(--color-slate);
+  text-decoration: none;
+  padding: 0.3rem 0.7rem;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--color-deep-12);
+  transition: background-color var(--transition-fast),
+              color var(--transition-fast),
+              border-color var(--transition-fast);
+  margin-top: 0.25rem;
+}
+
+.organizer-card__email:hover {
+  background-color: var(--color-forest-10);
+  color: var(--color-forest);
+  border-color: transparent;
+}
+
+.organizer-card__email svg {
+  flex-shrink: 0;
+}
+
+/* ——— Responsive ——— */
+@media (max-width: 640px) {
+  .organizer-card {
+    padding: 1.5rem 1rem;
+  }
+  .organizer-card__photo-wrap {
+    width: 80px;
+    height: 80px;
+  }
+}
