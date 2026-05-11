@@ -24,7 +24,8 @@
   height: 100%;
   pointer-events: none;
   z-index: 0;
-  opacity: 0.8; /* matches ctrl-trees default value */
+  opacity: 0.8;
+  /* matches ctrl-trees default value */
   transition: opacity 0.1s;
 }
 
@@ -63,13 +64,13 @@
   margin-bottom: 1.5rem;
 }
 
-.hero__eyebrow::before {
+/* .hero__eyebrow::before {
   content: '';
   display: block;
   width: 24px;
   height: 1px;
   background-color: var(--color-sage);
-}
+} */
 
 /* ——— Headline ——— */
 .hero__headline {
@@ -80,7 +81,8 @@
   color: var(--color-white);
   margin-bottom: 1.25rem;
   max-width: 18ch;
-  margin-inline: auto; /* centre the constrained headline */
+  margin-inline: auto;
+  /* centre the constrained headline */
 }
 
 /* Stagger animation on words */

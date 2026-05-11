@@ -8,7 +8,11 @@ document.addEventListener('DOMContentLoaded', async () => {
   const conf = await AISSH.loadData('data/conference.json');
   if (conf) {
     const dateEl = document.getElementById('hero-date');
-    if (dateEl) dateEl.textContent = conf.date || 'Date & Venue to be announced';
+    if (dateEl) {
+      const dateStr = conf.date || 'Date to be announced';
+      const venueStr = conf.venue && conf.city ? `${conf.venue} <br> ${conf.city}` : 'Venue to be announced';
+      dateEl.innerHTML = `${dateStr} <br> ${venueStr}`;
+    }
   }
 
   // ── Key Dates ─────────────────────────────────────────────
@@ -17,13 +21,13 @@ document.addEventListener('DOMContentLoaded', async () => {
   if (datesData && datesContainer) {
     // Only show dates that have a confirmed value OR are highlighted TBD
     const items = datesData.dates.map(d => {
-      const past    = d.date ? AISSH.isPast(d.date) : false;
+      const past = d.date ? AISSH.isPast(d.date) : false;
       const dateStr = d.date ? AISSH.formatDate(d.date) : 'To be announced';
       const cls = [
         'key-date-item',
         (d.highlight && d.date) ? 'key-date-item--highlight' : '',
-        past                    ? 'key-date-item--past'       : '',
-        !d.date                 ? 'key-date-item--tbd'        : '',
+        past ? 'key-date-item--past' : '',
+        !d.date ? 'key-date-item--tbd' : '',
       ].filter(Boolean).join(' ');
       return `
         <div class="${cls}">
