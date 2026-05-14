@@ -138,6 +138,17 @@
   background-color: #245c42 !important;
 }
 
+.site-nav__cta--secondary {
+  background-color: var(--color-sand) !important;
+  color: var(--color-deep) !important;
+  border: 1px solid var(--color-deep-10);
+}
+
+.site-nav__cta--secondary:hover {
+  background-color: #e5d8c3 !important;
+  color: var(--color-deep) !important;
+}
+
 /* ——— Hamburger (mobile) ——— */
 .site-header__hamburger {
   display: none;
@@ -220,10 +231,25 @@
   font-size: 1rem;
   font-weight: 600;
   text-decoration: none;
+  transition: background-color var(--transition-base);
+}
+
+.site-nav__mobile-cta:hover {
+  background-color: #245c42;
+}
+
+.site-nav__mobile-cta--secondary {
+  background-color: var(--color-sand) !important;
+  color: var(--color-deep) !important;
+  margin-left: 0.5rem;
+}
+
+.site-nav__mobile-cta--secondary:hover {
+  background-color: #e5d8c3 !important;
 }
 
 /* ——— Responsive ——— */
-@media (max-width: 768px) {
+@media (max-width: 1150px) {
   .site-header__inner {
     grid-template-columns: 1fr auto;
     /* logos | hamburger */
@@ -247,6 +273,7 @@
     height: 20px;
     margin-right: 10px;
   }
+
   .site-header__logo-img[src*="waterloo"] {
     height: 42px;
   }
