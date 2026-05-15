@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   const speakersData = await AISSH.loadData('data/speakers.json');
   const speakersContainer = document.getElementById('speakers-preview-grid');
   if (speakersData && speakersContainer) {
-    const preview = speakersData.speakers.slice(0, 4);
+    const preview = speakersData.speakers.slice(0, 6);
     speakersContainer.innerHTML = preview.map(s => {
       const initials = AISSH.initials(s.name);
       return `
