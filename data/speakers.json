@@ -21,13 +21,13 @@
       "status": "confirmed"
     },
     {
-      "id": "kerstin-dautenhahn",
-      "name": "Prof. Kerstin Dautenhahn",
+      "id": "moojan-ghafurian",
+      "name": "Prof. Moojan Ghafurian",
       "affiliation": "University of Waterloo",
-      "title": "Professor, Canada Research Chair (Tier 1) in Socially Intelligent Robotics, Director of the Social and Intelligent Robotics Research Laboratory (SIRRL)",
-      "bio": "Kerstin Dautenhahn is a professor in the Department of Electrical and Computer Engineering at the University of Waterloo. She is Canada Research Chair (Tier 1) in Socially Intelligent Robotics. Previously she was Canada 150 Research Chair in Intelligent Robotics (2018-2025). She is cross-appointed to the David R. Cheriton School of Computer Science, the Department of Mechanical and Mechatronics Engineering, and the Department of Systems Design Engineering at University of Waterloo. She is Visiting Professor at the University of Hertfordshire, UK. At Waterloo she is the Director of the Social and Intelligent Robotics Research Laboratory (SIRRL)). The main areas of her research are Human-Robot Interaction, Social Robotics, Assistive Technology, Developmental Robotics and Health Technologies. She is Editor in Chief (jointly with Prof. Angelo Cangelosi - University of Manchester, UK) of the Journal Interaction Studies- Social Behaviour and Communication in Biological and Artificial Systems published by John Benjamins Publishing Company, Editorial Board Member of Adaptive Behavior, Sage Publications, and Associate Editor of the International Journal of Social Robotics, published by Springer. She is an Editor of the book series Advances in Interaction Studies, published by John Benjamins Publishing Company. She is a Fellow of the Royal Society of Canada (RSC), Fellow of the IEEE, member of ACM, and a Lifelong Fellow of AISB. Since 2006 she has been part of the Standing Steering Committee of the IEEE conference RO-MAN (Human and Robot Interactive Communication).",
+      "title": "Assistant Professor, Department of Systems Design Engineering at the University of Waterloo and Director of the Emotionally Intelligent and Trustworthy (EITA) Research Laboratory.",
+      "bio": "Moojan Ghafurian is an Assistant Professor at the Department of Systems Design Engineering at the University of Waterloo and Director of the Emotionally Intelligent and Trustworthy (EITA) Research Laboratory. Prior to joining SYDE, she was a Research Assistant Professor at the Department of Electrical and Computer Engineering (2020-2023) and the Inaugural Wes Graham postdoctoral fellow at the David R. Cheriton School of Computer Science (2018-2020) at the University of Waterloo. She got her PhD from the Pennsylvania State University in 2017, and her research interests and background are in human-computer/robot interaction, social robotics, affective computing, and cognitive science. Her research explores computational models of how humans interact with computers to inform user-centered design of socially and emotionally intelligent technologies in multiple domains, especially in healthcare and for supporting older adults, persons with dementia, and caregivers. She has published at multiple venues such as the IEEE Transactions on Affective Computing, International Journal of Social Robotics, ACM CHI Conference on Human Factors in Computing Systems and the International Conference on Autonomous Agents and Multiagent Systems (AAMAS). Her work has been mentioned in different media, such as ACM TechNews, Semiconductor Engineering, CTV Kitchener, TNW, Penn State news, EurekAlert (AAAS), ScienceDaily, and University of Waterloo News.",
       "talk_title": "Talk title to be announced",
-      "photo": "assets/images/speakers/kerstin-dautenhahn.png",
+      "photo": "assets/images/speakers/mghafuri.png",
       "status": "confirmed"
     },
     {
@@ -46,7 +46,7 @@
       "affiliation": "University of Western Ontario",
       "title": "Associate Professor, Director of the Rotman Institute of Philosophy",
       "bio": "I am jointly appointed to the Department of Computer Science in the Faculty of Science, and to the Department of Epidemiology and Biostatistics in the Schulich School of Medicine & Dentistry. I am also appointed to the Schulich Interfaculty Program in Public Health and cross-appointed to the Department of Statistics and Actuarial Sciences.  My main research areas are machine learning, biostatistics, and health. In particular, I am interested in machine learning and statistical methodology for supporting health decisions, primarily in public health and primary health care. Many health decisions are made sequentially - for example, health decisions for managing chronic disease are made over time as the disease progresses and as we gain more information about a patient's health status and about their response to previous decisions. We also gain more information about the evolution of patient preferences as well, which should inform decision-making. Some of my core research work has been in adapting reinforcement learning methodology to be able to support these kinds of decisions that include evolving information and preferences.",
-      "talk_title": "Talk title to be announced",
+      "talk_title": "AI Research Needs Philosophy",
       "photo": "assets/images/speakers/dan-lizotte.jpeg",
       "status": "confirmed"
     }
