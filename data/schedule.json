@@ -17,7 +17,7 @@
       "type": "keynote",
       "title": "Keynote Speaker I",
       "speaker": "Prof. Catherine Burns",
-      "affiliation": "",
+      "affiliation": "University of Waterloo",
       "status": "confirmed",
       "details": "Talk title to be announced"
     },
@@ -26,15 +26,15 @@
       "type": "keynote",
       "title": "Keynote Speaker II",
       "speaker": "Prof. Joshua Pearce",
-      "affiliation": "",
+      "affiliation": "University of Western Ontario",
       "status": "confirmed",
-      "details": "Talk title to be announced"
+      "details": "Agrivoltaics as a Scalable Sustainable Solution to the AI Energy Challenge"
     },
     {
       "time": "10:30",
       "type": "break",
       "title": "Networking Break",
-      "details": "Coffee and Interdisciplinary Networking"
+      "details": "Coffee and Networking"
     },
     {
       "time": "11:00",
@@ -50,7 +50,7 @@
       "type": "keynote",
       "title": "Keynote Speaker IV",
       "speaker": "Prof. Isam Faik",
-      "affiliation": "",
+      "affiliation": "University of Western Ontario",
       "status": "confirmed",
       "details": "Talk title to be announced"
     },
@@ -65,15 +65,27 @@
       "type": "keynote",
       "title": "Keynote Speaker V",
       "speaker": "Prof. Dan Lizotte",
-      "affiliation": "",
+      "affiliation": "University of Western Ontario",
       "status": "confirmed",
-      "details": "Talk title to be announced"
+      "details": "AI Research Needs Philosophy"
     },
     {
       "time": "14:00",
       "type": "session",
-      "title": "Selected Short Talks",
-      "details": "15 minutes each - speakers announced after acceptance decisions"
+      "title": "Selected Short Talk I",
+      "speaker": "Samira Rasouli",
+      "affiliation": "University of Waterloo",
+      "status": "confirmed",
+      "details": "Human-Centred Design of a Robot-Assisted Intervention to Support University Students' Mental Well-Being"
+    },
+    {
+      "time": "14:30",
+      "type": "session",
+      "title": "Selected Short Talk II",
+      "speaker": "To Be Announced",
+      "affiliation": "To Be Announced",
+      "status": "to-be-announced",
+      "details": "Talk title to be announced"
     },
     {
       "time": "15:00",

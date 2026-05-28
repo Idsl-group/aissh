@@ -16,7 +16,7 @@
       "affiliation": "University of Western Ontario",
       "title": "Professor, John M. Thompson Chair in Information Technology and Innovation at the Thompson Centre for Engineering Leadership & Innovation",
       "bio": "Dr. Pearce is the John M. Thompson Chair in Information Technology and Innovation at the Thompson Centre for Engineering Leadership & Innovation. He holds appointments at Ivey Business School, the top ranked business school in Canada and the Department of Electrical & Computer Engineering at Western University in Canada, a top 1% global university. His research concentrates on the use of open source appropriate technology (OSAT) to find collaborative solutions to problems in sustainability and to reduce poverty. His research spans areas of engineering of solar photovoltaic technology, open hardware, and distributed recycling and additive manufacturing (DRAM) using RepRap 3-D printing, but also includes policy and economics. His research is regularly covered by the international and national press and it is continually ranked in the top 0.1% on Academia.edu. He is the editor-in-chief of HardwareX, the first journal dedicated to open source scientific hardware and the author of the Open-Source Lab:How to Build Your Own Hardware and Reduce Research Costs, Create, Share, and Save Money Using Open-Source Projects, and To Catch the Sun, an open source book of inspiring stories of communities coming together to harness their own solar energy, and how you can do it too!.",
-      "talk_title": "Talk title to be announced",
+      "talk_title": "Agrivoltaics as a Scalable Sustainable Solution to the AI Energy Challenge",
       "photo": "assets/images/speakers/joshua-pearce.png",
       "status": "confirmed"
     },
@@ -48,6 +48,16 @@
       "bio": "I am jointly appointed to the Department of Computer Science in the Faculty of Science, and to the Department of Epidemiology and Biostatistics in the Schulich School of Medicine & Dentistry. I am also appointed to the Schulich Interfaculty Program in Public Health and cross-appointed to the Department of Statistics and Actuarial Sciences.  My main research areas are machine learning, biostatistics, and health. In particular, I am interested in machine learning and statistical methodology for supporting health decisions, primarily in public health and primary health care. Many health decisions are made sequentially - for example, health decisions for managing chronic disease are made over time as the disease progresses and as we gain more information about a patient's health status and about their response to previous decisions. We also gain more information about the evolution of patient preferences as well, which should inform decision-making. Some of my core research work has been in adapting reinforcement learning methodology to be able to support these kinds of decisions that include evolving information and preferences.",
       "talk_title": "AI Research Needs Philosophy",
       "photo": "assets/images/speakers/dan-lizotte.jpeg",
+      "status": "confirmed"
+    },
+    {
+      "id": "samira-rasouli",
+      "name": "Samira Rasouli",
+      "affiliation": "University of Waterloo",
+      "title": "Postdoctoral Fellow, Social and Intelligent Robotics Research Laboratory",
+      "bio": "I am a postdoctoral fellow in the Electrical and Computer Engineering Department. I'm interested in applying intelligent assistive technologies to health issues.",
+      "talk_title": "Human-Centred Design of a Robot-Assisted Intervention to Support University Students' Mental Well-Being",
+      "photo": "assets/images/speakers/samirar.jpg",
       "status": "confirmed"
     }
   ]
