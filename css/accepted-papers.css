@@ -1,0 +1,346 @@
+/* ============================================================
+   ACCEPTED-PAPERS.CSS — Accepted Abstracts Page
+   ============================================================ */
+
+/* ——— Controls Bar (sticky below header) ——— */
+.papers-controls {
+  background-color: var(--color-sand);
+  border-bottom: 1px solid var(--color-deep-08);
+  padding: 1.1rem 0;
+  position: sticky;
+  top: var(--header-height);
+  z-index: 50;
+}
+
+.papers-controls__inner {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* ——— Search Input ——— */
+.papers-search {
+  position: relative;
+  flex: 1;
+  min-width: 200px;
+  max-width: 360px;
+}
+
+.papers-search__icon {
+  position: absolute;
+  left: 0.875rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-slate);
+  opacity: 0.45;
+  pointer-events: none;
+}
+
+.papers-search__input {
+  width: 100%;
+  padding: 0.58rem 1rem 0.58rem 2.5rem;
+  border: 1.5px solid var(--color-deep-12);
+  border-radius: var(--radius-full);
+  font-family: var(--font-heading);
+  font-size: var(--text-small);
+  background: var(--color-white);
+  color: var(--color-deep);
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.papers-search__input:focus {
+  outline: none;
+  border-color: var(--color-forest);
+  box-shadow: 0 0 0 3px var(--color-forest-10);
+}
+
+.papers-search__input::placeholder {
+  color: var(--color-slate);
+  opacity: 0.5;
+}
+
+/* Hide the native clear button on search inputs */
+.papers-search__input::-webkit-search-cancel-button { display: none; }
+
+/* ——— Filter Pill Buttons ——— */
+.papers-filters {
+  display: flex;
+  gap: 0.45rem;
+  flex-wrap: wrap;
+}
+
+.filter-pill {
+  padding: 0.38rem 0.95rem;
+  border-radius: var(--radius-full);
+  border: 1.5px solid var(--color-deep-12);
+  background: transparent;
+  font-family: var(--font-heading);
+  font-size: var(--text-caption);
+  font-weight: 500;
+  color: var(--color-slate);
+  cursor: pointer;
+  transition: border-color var(--transition-fast),
+              color var(--transition-fast),
+              background-color var(--transition-fast);
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+.filter-pill:hover {
+  border-color: var(--color-forest);
+  color: var(--color-forest);
+  background: var(--color-forest-10);
+}
+
+.filter-pill--active {
+  background: var(--color-forest);
+  border-color: var(--color-forest);
+  color: var(--color-white);
+}
+
+.filter-pill--active:hover {
+  background: var(--color-deep);
+  border-color: var(--color-deep);
+  color: var(--color-white);
+}
+
+.filter-pill:focus-visible {
+  outline: 2px solid var(--color-amber);
+  outline-offset: 2px;
+}
+
+/* ——— Count Label ——— */
+.papers-count {
+  font-family: var(--font-mono);
+  font-size: var(--text-caption);
+  color: var(--color-slate);
+  opacity: 0.65;
+  margin-bottom: 2rem;
+  letter-spacing: 0.06em;
+}
+
+/* ——— Paper Grid ——— */
+.papers-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--card-gap);
+}
+
+@media (max-width: 1024px) {
+  .papers-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 640px) {
+  .papers-grid { grid-template-columns: 1fr; }
+}
+
+/* ——— Paper Card ——— */
+.paper-card {
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow var(--transition-base), transform var(--transition-base);
+}
+
+.paper-card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-4px);
+}
+
+/* Hidden state during search/filter */
+.paper-card--hidden {
+  display: none;
+}
+
+/* ——— Meta Bar (ID + Area + Pref) ——— */
+.paper-card__meta-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.9rem 1.25rem 0;
+  flex-wrap: wrap;
+}
+
+.paper-card__id {
+  font-family: var(--font-mono);
+  font-size: var(--text-caption);
+  font-weight: 700;
+  color: var(--color-white);
+  background: var(--color-deep);
+  padding: 0.18rem 0.55rem;
+  border-radius: var(--radius-sm);
+  letter-spacing: 0.08em;
+  flex-shrink: 0;
+}
+
+.paper-card__area {
+  font-family: var(--font-mono);
+  font-size: var(--text-caption);
+  color: var(--color-forest);
+  background: var(--color-forest-10);
+  border: 1px solid var(--color-forest-15);
+  border-radius: var(--radius-sm);
+  padding: 0.18rem 0.55rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 170px;
+}
+
+.paper-card__pref {
+  font-family: var(--font-mono);
+  font-size: var(--text-caption);
+  color: var(--color-amber);
+  background: var(--color-amber-10);
+  border: 1px solid var(--color-amber-15);
+  border-radius: var(--radius-sm);
+  padding: 0.18rem 0.55rem;
+  margin-left: auto;
+  flex-shrink: 0;
+}
+
+/* ——— Paper Visual (image / gif) ——— */
+.paper-card__visual {
+  margin: 0.85rem 1.25rem 0;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+  background: var(--color-deep-05);
+}
+
+.paper-card__visual-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform var(--transition-slow);
+}
+
+.paper-card:hover .paper-card__visual-img {
+  transform: scale(1.04);
+}
+
+/* ——— Paper Title ——— */
+.paper-card__title {
+  font-family: var(--font-display);
+  font-size: clamp(1rem, 1.4vw, 1.15rem);
+  font-weight: 600;
+  line-height: 1.35;
+  color: var(--color-deep);
+  padding: 0.85rem 1.25rem 0;
+  flex: 1;
+}
+
+/* ——— Authors Row ——— */
+.paper-card__authors {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 0.8rem 1.25rem 1.25rem;
+}
+
+.paper-card__author-photo-wrap {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  flex-shrink: 0;
+  background: linear-gradient(135deg, var(--color-forest-15), var(--color-deep-08));
+}
+
+.paper-card__author-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: grayscale(20%);
+  transition: filter var(--transition-slow);
+}
+
+.paper-card:hover .paper-card__author-photo {
+  filter: none;
+}
+
+.paper-card__author-avatar {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-forest);
+}
+
+.paper-card__author-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  min-width: 0;
+}
+
+.paper-card__lead-author {
+  font-family: var(--font-heading);
+  font-size: var(--text-small);
+  font-weight: 600;
+  color: var(--color-deep);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.paper-card__author-list {
+  font-family: var(--font-body);
+  font-size: var(--text-caption);
+  color: var(--color-slate);
+  opacity: 0.8;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-style: italic;
+  line-height: 1.4;
+}
+
+/* ——— Empty State ——— */
+.papers-empty {
+  text-align: center;
+  padding: 5rem 0;
+  color: var(--color-slate);
+  font-family: var(--font-body);
+  grid-column: 1 / -1;
+}
+
+.papers-empty p {
+  margin-bottom: 1.5rem;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  opacity: 0.8;
+}
+
+/* ——— Responsive Controls ——— */
+@media (max-width: 768px) {
+  .papers-controls__inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .papers-search {
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .filter-pill {
+    font-size: 0.7rem;
+    padding: 0.3rem 0.7rem;
+  }
+}

@@ -5,17 +5,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description"
-    content="Call for Abstracts — submit your extended abstract to AISSH 2026. Open to students across disciplines working on AI safety, sustainability, and humanity.">
-  <title>Call for Abstracts | AISSH 2026</title>
+    content="Accepted abstracts at AISSH 2026 — 15 selected student works exploring AI safety, sustainability, ethics, and humanity.">
+  <title>Accepted Abstracts | AISSH 2026</title>
   <link rel="icon" type="image/png" href="assets/images/favicon.png?v=2">
   <link rel="shortcut icon" href="assets/images/favicon.png?v=2">
 
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=JetBrains+Mono:wght@400&display=swap"
     rel="stylesheet">
 
+  <!-- CSS -->
   <link rel="stylesheet" href="css/variables.css">
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/layout.css">
@@ -23,11 +25,12 @@
   <link rel="stylesheet" href="css/animations.css">
   <link rel="stylesheet" href="css/header.css">
   <link rel="stylesheet" href="css/footer.css">
-  <link rel="stylesheet" href="css/form.css">
+  <link rel="stylesheet" href="css/accepted-papers.css">
 </head>
 
-<body class="page-cfp">
+<body class="page-accepted-papers">
 
+  <!-- ══ HEADER ════════════════════════════════════════════════ -->
   <header class="site-header" role="banner">
     <div class="site-header__inner">
       <a href="index.html" class="site-header__logos" aria-label="AISSH 2026 — Home">
@@ -53,6 +56,7 @@
     </div>
   </header>
 
+  <!-- ══ MOBILE NAV ════════════════════════════════════════════ -->
   <nav id="mobile-nav" class="site-nav__mobile" aria-label="Mobile navigation">
     <a href="index.html" class="site-nav__mobile-link" data-nav-link>Home</a>
     <a href="speakers.html" class="site-nav__mobile-link" data-nav-link>Speakers</a>
@@ -63,80 +67,84 @@
     <a href="call-for-abstracts.html" class="site-nav__mobile-cta">Call for Abstracts</a>
     <a href="register.html" class="site-nav__mobile-cta site-nav__mobile-cta--secondary">Register</a>
   </nav>
+
   <main id="main-content">
 
-    <!-- Page Hero -->
+    <!-- ══ § PAGE HERO ════════════════════════════════════════ -->
     <div class="page-hero">
       <canvas id="tree-canvas" class="hero__canvas" aria-hidden="true"></canvas>
       <div class="container">
         <span class="page-hero__label">AISSH 2026</span>
-        <h1 class="page-hero__title">Call for Abstracts</h1>
-        <p class="page-hero__subtitle">We welcome extended abstracts from students across disciplines working on
-          responsible, aligned AI.</p>
+        <h1 class="page-hero__title">Accepted Abstracts</h1>
+        <p class="page-hero__subtitle">
+          Works exploring AI safety, sustainability, ethics,
+          healthcare, and humanity selected for poster presentation at AISSH 2026 workshop.
+        </p>
       </div>
     </div>
 
-    <section class="section" aria-label="Call for abstracts and submission form">
+    <!-- ══ § CONTROLS BAR ════════════════════════════════════ -->
+    <div class="papers-controls" aria-label="Search and filter controls">
       <div class="container">
-        <div style="max-width: 800px; margin-inline: auto;">
+        <div class="papers-controls__inner">
 
-          <!-- ── Info section ─────────────────────────────── -->
-          <div aria-label="Submission information">
-
-            <div class="cfp-info__section reveal">
-              <h2 class="cfp-info__section-title">What We're Looking For</h2>
-              <p style="font-size:var(--text-small); color:var(--color-slate); line-height:1.7;">
-                Extended abstracts of <strong>1 page maximum</strong> (excluding references), from
-                <strong>student authors</strong> at any level. Selected authors may be invited to
-                contribute to a book chapter or give a short talk at the workshop.
-              </p>
-            </div>
-
-            <div class="cfp-info__section reveal anim-delay-1">
-              <h2 class="cfp-info__section-title">Submission Guidelines</h2>
-              <ul class="cfp-guideline-list">
-                <li class="cfp-guideline-item">PDF format, 1 page max (references on additional pages)</li>
-                <li class="cfp-guideline-item">IEEE double column format</li>
-                <li class="cfp-guideline-item">Submit via the embedded form</li>
-                <li class="cfp-guideline-item">Original, unpublished or published work</li>
-              </ul>
-            </div>
-
-            <div class="cfp-info__section reveal anim-delay-2" style="margin-bottom: 4rem;">
-              <h2 class="cfp-info__section-title">Thematic Areas</h2>
-              <div class="cfp-area-list" id="cfp-areas-list">
-                <!-- Injected by form.js reading areas.json -->
-                <p style="font-size:var(--text-small); color:var(--color-slate);">Loading…</p>
-              </div>
-            </div>
-
+          <!-- Search -->
+          <div class="papers-search">
+            <svg class="papers-search__icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+              viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" aria-hidden="true">
+              <circle cx="11" cy="11" r="8" />
+              <line x1="21" y1="21" x2="16.65" y2="16.65" />
+            </svg>
+            <input type="search" id="papers-search-input" class="papers-search__input"
+              placeholder="Search by title, author, or paper #…" aria-label="Search accepted abstracts"
+              autocomplete="off">
           </div>
 
-          <!-- ── Submission Link Card ───────────────────────────── -->
-          <div class="reveal anim-delay-3">
-            <div style="background-color: var(--color-white); padding: 3.5rem 2rem; border-radius: var(--radius-lg); border: 1px solid var(--color-deep-10); text-align: center; box-shadow: 0 10px 40px rgba(0,0,0,0.03);">
-              <h2 style="font-family: var(--font-display); font-size: 2.25rem; font-weight: 700; color: var(--color-deep); margin-bottom: 1rem;">Ready to Submit?</h2>
-              <p style="color: var(--color-slate); margin-bottom: 2.5rem; line-height: 1.6; font-size: 1.1rem; max-width: 40ch; margin-inline: auto;">
-                Abstract submissions are collected securely via Google Forms. You will be asked to sign in to upload your PDF.
-              </p>
-              <a href="https://docs.google.com/forms/d/e/1FAIpQLSc29Hqjt8fINBQx_fYsAO8hVOtPtOV0X7slFe8G4czQ8H5ktw/viewform?usp=dialog" 
-                 target="_blank" rel="noopener noreferrer" 
-                 class="btn btn-primary" 
-                 style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 1rem 2.25rem; font-size: 1.1rem; border-radius: var(--radius-full);">
-                Go to Submission Form
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-              </a>
-            </div>
+          <!-- Filter pills -->
+          <div class="papers-filters" id="papers-filter-bar" role="group" aria-label="Filter by thematic area">
+            <button class="filter-pill filter-pill--active" data-filter="all" id="filter-all">All</button>
+            <button class="filter-pill" data-filter="AI Safety and Alignment" id="filter-safety">AI Safety</button>
+            <button class="filter-pill" data-filter="AI for Sustainability" id="filter-sustain">Sustainability</button>
+            <button class="filter-pill" data-filter="AI Ethics and Governance" id="filter-ethics">Ethics</button>
+            <button class="filter-pill" data-filter="Human-AI Interaction" id="filter-human">Human-AI</button>
+            <button class="filter-pill" data-filter="AI in Healthcare and Wellbeing"
+              id="filter-health">Healthcare</button>
           </div>
 
         </div>
       </div>
+    </div>
+
+    <!-- ══ § PAPERS GRID ═════════════════════════════════════ -->
+    <section class="section" aria-labelledby="papers-grid-heading">
+      <div class="container">
+        <h2 class="visually-hidden" id="papers-grid-heading">All Accepted Abstracts</h2>
+
+        <!-- Count -->
+        <p class="papers-count reveal" id="papers-count" aria-live="polite">
+          Loading abstracts…
+        </p>
+
+        <!-- Grid — populated by accepted-papers.js -->
+        <div class="papers-grid" id="papers-grid" aria-label="Accepted abstract cards">
+          <p style="color:var(--color-slate); grid-column:1/-1; text-align:center; padding:3rem 0;">
+            Loading abstracts…
+          </p>
+        </div>
+
+        <!-- Empty state -->
+        <div class="papers-empty" id="papers-empty" hidden>
+          <p>No abstracts match your search. Try a different term or clear the filter.</p>
+          <button class="btn btn-outline-dark" id="papers-reset-btn">Clear search</button>
+        </div>
+
+      </div>
     </section>
-
-
 
   </main>
 
+  <!-- ══ FOOTER ═════════════════════════════════════════════════ -->
   <footer class="site-footer" role="contentinfo">
     <div class="container">
       <div class="site-footer__body">
@@ -174,9 +182,11 @@
     <div class="site-footer__uni-bar" aria-hidden="true"></div>
   </footer>
 
+  <!-- ══ SCRIPTS ══════════════════════════════════════════════ -->
   <script src="js/main.js"></script>
-  <script src="js/form.js"></script>
+  <script src="js/accepted-papers.js"></script>
   <script src="js/tree.js"></script>
+
 </body>
 
 </html>

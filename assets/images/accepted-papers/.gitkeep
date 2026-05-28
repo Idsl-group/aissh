@@ -1,0 +1,3 @@
+# Place paper images / gifs here.
+# Naming: [lead-author-slug].gif  (or .png / .jpg)  e.g. dake-cao.gif
+# JS tries .gif first, then .png, then .jpg. If none found, slot is hidden.
