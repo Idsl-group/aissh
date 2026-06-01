@@ -16,12 +16,10 @@
   bottom: 0;
   left: 0;
   width: 2px;
-  background: linear-gradient(
-    to bottom,
-    var(--color-forest),
-    var(--color-sage),
-    var(--color-deep-08)
-  );
+  background: linear-gradient(to bottom,
+      var(--color-forest),
+      var(--color-sage),
+      var(--color-deep-08));
   border-radius: var(--radius-full);
 }
 
@@ -44,8 +42,8 @@
 .session-block::before {
   content: '';
   position: absolute;
-  left: -2.35rem;
-  top: 1.75rem;
+  left: -2.3rem;
+  top: 2rem;
   width: 12px;
   height: 12px;
   border-radius: 50%;
@@ -57,11 +55,26 @@
 }
 
 /* Type-specific dot colours */
-.session-block--keynote::before     { background-color: var(--color-forest); box-shadow: 0 0 0 2px var(--color-forest); }
-.session-block--awards::before      { background-color: var(--color-amber);  box-shadow: 0 0 0 2px var(--color-amber); }
+.session-block--keynote::before {
+  background-color: var(--color-forest);
+  box-shadow: 0 0 0 2px var(--color-forest);
+}
+
+.session-block--awards::before {
+  background-color: var(--color-amber);
+  box-shadow: 0 0 0 2px var(--color-amber);
+}
+
 .session-block--break::before,
-.session-block--lunch::before       { background-color: var(--color-sand);   box-shadow: 0 0 0 2px var(--color-slate); }
-.session-block--networking::before  { background-color: var(--color-sage);   box-shadow: 0 0 0 2px var(--color-sage); }
+.session-block--lunch::before {
+  background-color: var(--color-sand);
+  box-shadow: 0 0 0 2px var(--color-slate);
+}
+
+.session-block--networking::before {
+  background-color: var(--color-sage);
+  box-shadow: 0 0 0 2px var(--color-sage);
+}
 
 /* ——— Time ——— */
 .session-block__time {
@@ -87,11 +100,26 @@
   color: var(--color-slate);
 }
 
-.session-block--keynote .session-block__icon    { background-color: var(--color-forest-10); color: var(--color-forest); }
-.session-block--awards .session-block__icon     { background-color: var(--color-amber-10);  color: var(--color-amber); }
+.session-block--keynote .session-block__icon {
+  background-color: var(--color-forest-10);
+  color: var(--color-forest);
+}
+
+.session-block--awards .session-block__icon {
+  background-color: var(--color-amber-10);
+  color: var(--color-amber);
+}
+
 .session-block--break .session-block__icon,
-.session-block--lunch .session-block__icon      { background-color: rgba(244, 233, 216, 0.6); color: var(--color-slate); }
-.session-block--networking .session-block__icon { background-color: rgba(116, 198, 157, 0.15); color: var(--color-sage); }
+.session-block--lunch .session-block__icon {
+  background-color: rgba(244, 233, 216, 0.6);
+  color: var(--color-slate);
+}
+
+.session-block--networking .session-block__icon {
+  background-color: rgba(116, 198, 157, 0.15);
+  color: var(--color-sage);
+}
 
 /* ——— Content ——— */
 .session-block__content {
@@ -116,8 +144,15 @@
   opacity: 0.6;
 }
 
-.session-block--keynote .session-block__type-tag    { color: var(--color-forest); opacity: 0.9; }
-.session-block--awards .session-block__type-tag     { color: var(--color-amber);  opacity: 0.9; }
+.session-block--keynote .session-block__type-tag {
+  color: var(--color-forest);
+  opacity: 0.9;
+}
+
+.session-block--awards .session-block__type-tag {
+  color: var(--color-amber);
+  opacity: 0.9;
+}
 
 .session-block__location-tag {
   font-family: var(--font-mono);
@@ -164,17 +199,15 @@
   line-height: 1.5;
 }
 
-/* Subtle left accent line on keynotes */
-.session-block--keynote {
+/* Subtle left accent line on keynotes and awards content card */
+.session-block--keynote .session-block__content {
   border-left: 3px solid var(--color-forest);
-  margin-left: 0.25rem;
-  padding-left: 1rem;
+  padding-left: 1.25rem;
 }
 
-.session-block--awards {
+.session-block--awards .session-block__content {
   border-left: 3px solid var(--color-amber);
-  margin-left: 0.25rem;
-  padding-left: 1rem;
+  padding-left: 1.25rem;
 }
 
 /* ——— Legend ——— */
@@ -216,9 +249,11 @@
     padding: 1rem 1rem 1rem 0;
   }
 
-  .session-block--keynote,
-  .session-block--awards {
-    padding-left: 1rem;
+  .session-block::before {
+    left: -1.825rem;
+    /* center dot horizontally on spine */
+    top: 1.4rem;
+    /* align dot center vertically with time text */
   }
 
   .session-block__icon {
