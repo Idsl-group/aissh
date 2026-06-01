@@ -79,7 +79,10 @@ document.addEventListener('DOMContentLoaded', async () => {
         <div class="quick-schedule-row">
           <span class="quick-schedule-row__time">${s.time}</span>
           <span class="quick-schedule-row__dot" style="background-color:${dotColor}" aria-hidden="true"></span>
-          <span class="quick-schedule-row__title">${s.title}</span>
+          <div class="quick-schedule-row__content">
+            <span class="quick-schedule-row__title">${s.title}</span>
+            ${s.location ? `<span class="quick-schedule-row__location">${s.location}</span>` : ''}
+          </div>
           ${s.speaker ? `<span class="quick-schedule-row__speaker">${s.speaker}</span>` : ''}
         </div>`;
     }).join('');

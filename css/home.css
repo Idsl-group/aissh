@@ -384,18 +384,34 @@
   flex-shrink: 0;
 }
 
+.quick-schedule-row__content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  flex: 1;
+  min-width: 0;
+}
+
 .quick-schedule-row__title {
   font-family: var(--font-heading);
   font-size: var(--text-small);
   font-weight: 500;
   color: var(--color-deep);
-  flex: 1;
+  line-height: 1.35;
+}
+
+.quick-schedule-row__location {
+  font-family: var(--font-mono);
+  font-size: var(--text-caption);
+  color: var(--color-forest);
+  opacity: 0.85;
 }
 
 .quick-schedule-row__speaker {
   font-family: var(--font-body);
   font-size: var(--text-caption);
   color: var(--color-slate);
+  margin-left: auto;
 }
 
 .quick-schedule__link {

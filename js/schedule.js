@@ -21,7 +21,10 @@ document.addEventListener('DOMContentLoaded', async () => {
           ${AISSH.sessionIcon(s.type)}
         </div>
         <div class="session-block__content">
-          <span class="session-block__type-tag">${typeLabel}</span>
+          <div class="session-block__header-tags">
+            <span class="session-block__type-tag">${typeLabel}</span>
+            ${s.location ? `<span class="session-block__location-tag">${s.location}</span>` : ''}
+          </div>
           <h3 class="session-block__title">${s.title}</h3>
           ${s.speaker ? `<p class="session-block__speaker">${s.speaker}</p>` : ''}
           ${s.affiliation ? `<p class="session-block__affiliation">${s.affiliation}</p>` : ''}

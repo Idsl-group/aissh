@@ -4,13 +4,15 @@
       "time": "08:30",
       "type": "registration",
       "title": "Registration",
-      "details": "Check-in and Morning Refreshments"
+      "details": "Check-in and Morning Refreshments",
+      "location": "NCB 113"
     },
     {
       "time": "09:00",
       "type": "session",
       "title": "Opening Remarks",
-      "details": "Welcome and Workshop Objectives"
+      "details": "Welcome and Workshop Objectives",
+      "location": "NCB 113"
     },
     {
       "time": "09:15",
@@ -19,7 +21,8 @@
       "speaker": "Prof. Catherine Burns",
       "affiliation": "University of Waterloo",
       "status": "confirmed",
-      "details": "Designing for Humans in the world of AI"
+      "details": "Designing for Humans in the world of AI",
+      "location": "NCB 113"
     },
     {
       "time": "09:45",
@@ -28,13 +31,15 @@
       "speaker": "Prof. Joshua Pearce",
       "affiliation": "University of Western Ontario",
       "status": "confirmed",
-      "details": "Agrivoltaics as a Scalable Sustainable Solution to the AI Energy Challenge"
+      "details": "Agrivoltaics as a Scalable Sustainable Solution to the AI Energy Challenge",
+      "location": "NCB 113"
     },
     {
       "time": "10:30",
       "type": "break",
       "title": "Networking Break",
-      "details": "Coffee and Networking: NCB"
+      "details": "Coffee and Networking: NCB",
+      "location": "NCB Atrium"
     },
     {
       "time": "11:00",
@@ -43,7 +48,8 @@
       "speaker": "Prof. Moojan Ghafurian",
       "affiliation": "University of Waterloo",
       "status": "confirmed",
-      "details": "User-centred Emotionally Intelligent Social Robots For Health and Training"
+      "details": "User-centred Emotionally Intelligent Social Robots For Health and Training",
+      "location": "NCB 113"
     },
     {
       "time": "11:30",
@@ -52,13 +58,15 @@
       "speaker": "Prof. Isam Faik",
       "affiliation": "University of Western Ontario",
       "status": "confirmed",
-      "details": "Future Tense: Rethinking governance in the age of agentic machines"
+      "details": "Future Tense: Rethinking governance in the age of agentic machines",
+      "location": "NCB 113"
     },
     {
       "time": "12:00",
       "type": "lunch",
       "title": "Lunch",
-      "details": "Lunch break: Grad Club, Middlesex Building"
+      "details": "Lunch break: Grad Club, Middlesex Building",
+      "location": "Grad Club, Middlesex Building"
     },
     {
       "time": "13:30",
@@ -67,43 +75,39 @@
       "speaker": "Prof. Dan Lizotte",
       "affiliation": "University of Western Ontario",
       "status": "confirmed",
-      "details": "AI Research Needs Philosophy"
+      "details": "AI Research Needs Philosophy",
+      "location": "NCB 113"
     },
     {
       "time": "14:00",
       "type": "session",
-      "title": "Selected Short Talk I",
+      "title": "Selected Short Talk",
       "speaker": "Samira Rasouli",
       "affiliation": "University of Waterloo",
       "status": "confirmed",
-      "details": "Human-Centred Design of a Robot-Assisted Intervention to Support University Students' Mental Well-Being"
+      "details": "Human-Centred Design of a Robot-Assisted Intervention to Support University Students' Mental Well-Being",
+      "location": "NCB 113"
     },
     {
       "time": "14:30",
-      "type": "session",
-      "title": "Selected Short Talk II",
-      "speaker": "To Be Announced",
-      "affiliation": "To Be Announced",
-      "status": "to-be-announced",
-      "details": "Talk title to be announced"
-    },
-    {
-      "time": "15:00",
       "type": "break",
       "title": "Poster Session + Coffee",
-      "details": "Interactive poster presentations and coffee: NCB Atrium"
+      "details": "Interactive poster presentations and coffee: NCB Atrium",
+      "location": "NCB Atrium"
     },
     {
       "time": "16:00",
       "type": "awards",
       "title": "Awards & Closing Remarks",
-      "details": "Best Poster Award, Best Talk Award, Closing Remarks"
+      "details": "Best Poster Award, Closing Remarks",
+      "location": "NCB 113"
     },
     {
       "time": "16:30",
       "type": "networking",
       "title": "Networking",
-      "details": "Open networking reception"
+      "details": "Open networking reception",
+      "location": "NCB Atrium"
     }
   ]
 }

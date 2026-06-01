@@ -145,12 +145,15 @@
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  transition: box-shadow var(--transition-base), transform var(--transition-base);
+  transition: box-shadow var(--transition-base), transform var(--transition-base), border-color var(--transition-base);
+  cursor: pointer;
+  border: 1px solid transparent;
 }
 
 .paper-card:hover {
   box-shadow: var(--shadow-lg);
   transform: translateY(-4px);
+  border-color: var(--color-forest-20);
 }
 
 /* Hidden state during search/filter */
@@ -203,27 +206,6 @@
   padding: 0.18rem 0.55rem;
   margin-left: auto;
   flex-shrink: 0;
-}
-
-/* ——— Paper Visual (image / gif) ——— */
-.paper-card__visual {
-  margin: 0.85rem 1.25rem 0;
-  border-radius: var(--radius-md);
-  overflow: hidden;
-  aspect-ratio: 16 / 9;
-  background: var(--color-deep-05);
-}
-
-.paper-card__visual-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  transition: transform var(--transition-slow);
-}
-
-.paper-card:hover .paper-card__visual-img {
-  transform: scale(1.04);
 }
 
 /* ——— Paper Title ——— */
@@ -324,7 +306,286 @@
   opacity: 0.8;
 }
 
-/* ——— Responsive Controls ——— */
+/* ——— Interactive Modal Overlay ——— */
+.paper-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(14, 25, 22, 0.72);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+.paper-modal {
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  width: 100%;
+  max-width: 860px;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.4), 0 0 0 1px var(--color-forest-15);
+  animation: modalFadeIn 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  scrollbar-width: thin;
+}
+
+.paper-modal::-webkit-scrollbar {
+  width: 6px;
+}
+.paper-modal::-webkit-scrollbar-thumb {
+  background-color: var(--color-deep-20);
+  border-radius: 4px;
+}
+
+.paper-modal__close {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: var(--radius-full);
+  background: var(--color-sand);
+  border: 1px solid var(--color-deep-12);
+  color: var(--color-deep);
+  font-size: 1.5rem;
+  font-weight: 300;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  z-index: 10;
+  line-height: 1;
+}
+
+.paper-modal__close:hover {
+  background: var(--color-forest);
+  border-color: var(--color-forest);
+  color: var(--color-white);
+  transform: rotate(90deg);
+}
+
+.paper-modal__container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 3rem;
+}
+
+/* Modal Header styling */
+.paper-modal__header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding-right: 3rem; /* Leave room for close button */
+}
+
+/* Left/Right layout inside the presenting author info tab */
+.paper-modal__author-profile {
+  display: flex;
+  gap: 2.25rem;
+  align-items: flex-start;
+}
+
+.paper-modal__author-photo-column {
+  width: 220px;
+  flex-shrink: 0;
+}
+
+.paper-modal__photo-wrap {
+  width: 100%;
+  height: 275px; /* Profile picture standard aspect ratio */
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--color-forest-10), var(--color-deep-08));
+  border: 1.5px solid var(--color-forest-20);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+}
+
+.paper-modal__photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.paper-modal__avatar {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--color-forest);
+  background: var(--color-forest-10);
+}
+
+.paper-modal__author-details-column {
+  flex: 1;
+  min-width: 0;
+}
+
+.paper-modal__meta-header {
+  display: flex;
+  gap: 0.6rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.paper-modal__id {
+  font-family: var(--font-mono);
+  font-size: var(--text-caption);
+  font-weight: 700;
+  color: var(--color-white);
+  background: var(--color-deep);
+  padding: 0.2rem 0.65rem;
+  border-radius: var(--radius-sm);
+  letter-spacing: 0.08em;
+  flex-shrink: 0;
+}
+
+.paper-modal__area {
+  font-family: var(--font-mono);
+  font-size: var(--text-caption);
+  color: var(--color-forest);
+  background: var(--color-forest-10);
+  border: 1px solid var(--color-forest-15);
+  padding: 0.2rem 0.65rem;
+  border-radius: var(--radius-sm);
+}
+
+.paper-modal__title {
+  font-family: var(--font-display);
+  font-size: clamp(1.3rem, 2.4vw, 1.8rem);
+  font-weight: 700;
+  color: var(--color-deep);
+  line-height: 1.3;
+  margin: 0;
+}
+
+/* ——— Tabs Navigation ——— */
+.paper-modal__tabs {
+  display: flex;
+  gap: 0.5rem;
+  border-bottom: 2px solid var(--color-deep-08);
+  padding-bottom: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.paper-modal__tab-btn {
+  padding: 0.5rem 1rem;
+  font-family: var(--font-heading);
+  font-size: var(--text-small);
+  font-weight: 600;
+  color: var(--color-slate);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  transition: color var(--transition-fast);
+}
+
+.paper-modal__tab-btn:hover {
+  color: var(--color-forest);
+}
+
+.paper-modal__tab-btn--active {
+  color: var(--color-forest);
+}
+
+.paper-modal__tab-btn--active::after {
+  content: '';
+  position: absolute;
+  bottom: -0.625rem; /* align on the 2px border line */
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-forest);
+}
+
+/* ——— Tab Content ——— */
+.paper-modal__tab-content {
+  width: 100%;
+}
+
+.paper-modal__tab-content[hidden] {
+  display: none !important;
+}
+
+/* Metadata Info Grid */
+.paper-modal__info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem 1.5rem;
+  padding: 0.25rem 0 0 0;
+}
+
+.paper-modal__info-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  min-width: 0;
+}
+
+.paper-modal__info-item--full {
+  grid-column: 1 / -1;
+}
+
+.paper-modal__info-label {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--color-slate);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  opacity: 0.65;
+}
+
+.paper-modal__info-val {
+  font-family: var(--font-heading);
+  font-size: var(--text-small);
+  font-weight: 600;
+  color: var(--color-deep);
+  line-height: 1.4;
+  word-break: break-word;
+}
+
+/* Dynamic visual box */
+.paper-modal__visual {
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  max-height: 420px;
+  width: 100%;
+  border: 1.5px solid var(--color-deep-12);
+  background: var(--color-deep-05);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.paper-modal__visual-img {
+  max-width: 100%;
+  max-height: 420px;
+  object-fit: contain;
+  display: block;
+}
+
+@keyframes modalFadeIn {
+  from { opacity: 0; transform: scale(0.96) translateY(12px); }
+  to { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+/* ——— Responsive Layouts ——— */
 @media (max-width: 768px) {
   .papers-controls__inner {
     flex-direction: column;
@@ -336,11 +597,44 @@
     max-width: 100%;
     width: 100%;
   }
+
+  .paper-modal__container {
+    padding: 2.2rem;
+    gap: 1.25rem;
+  }
+
+  .paper-modal__header {
+    padding-right: 0;
+  }
+
+  .paper-modal__author-profile {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .paper-modal__author-photo-column {
+    width: 100%;
+    max-width: 200px;
+  }
+
+  .paper-modal__info-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
 }
 
 @media (max-width: 480px) {
   .filter-pill {
     font-size: 0.7rem;
     padding: 0.3rem 0.7rem;
+  }
+
+  .paper-modal-overlay {
+    padding: 1rem;
+  }
+
+  .paper-modal__container {
+    padding: 1.5rem;
   }
 }
