@@ -19,7 +19,7 @@
       "speaker": "Prof. Catherine Burns",
       "affiliation": "University of Waterloo",
       "status": "confirmed",
-      "details": "Talk title to be announced"
+      "details": "Designing for Humans in the world of AI"
     },
     {
       "time": "09:45",
@@ -34,7 +34,7 @@
       "time": "10:30",
       "type": "break",
       "title": "Networking Break",
-      "details": "Coffee and Networking"
+      "details": "Coffee and Networking: NCB"
     },
     {
       "time": "11:00",
@@ -52,13 +52,13 @@
       "speaker": "Prof. Isam Faik",
       "affiliation": "University of Western Ontario",
       "status": "confirmed",
-      "details": "Talk title to be announced"
+      "details": "Future Tense: Rethinking governance in the age of agentic machines"
     },
     {
       "time": "12:00",
       "type": "lunch",
       "title": "Lunch",
-      "details": "Lunch break"
+      "details": "Lunch break: Grad Club, Middlesex Building"
     },
     {
       "time": "13:30",
@@ -91,7 +91,7 @@
       "time": "15:00",
       "type": "break",
       "title": "Poster Session + Coffee",
-      "details": "Interactive poster presentations and coffee"
+      "details": "Interactive poster presentations and coffee: NCB Atrium"
     },
     {
       "time": "16:00",
